@@ -1,7 +1,7 @@
 import Image from "next/image";
 import "./globals.css";
 import { Button } from "@/components/ui/button";
-import { FaLinkedin } from "react-icons/fa";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -35,10 +35,10 @@ export default function Home() {
           >
             Read our docs
           </a>
-          <div className="flex flex-wrap items-center gap-2 md:flex-row font-montserrat">
+          <div className="flex flex-wrap items-center gap-2 md:flex-row">
             <Button
               variant="outline"
-              className="rounded-full items-center h-10 px-6 sm:h-12 md:px-8"
+              className="rounded-full items-center h-10 px-6 sm:h-12 md:px-8 font-medium text-sm sm:text-base"
             >
               Me contacter
             </Button>
@@ -48,18 +48,12 @@ export default function Home() {
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          href="https://github.com/NamaKa298"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
+          <FaGithub />
+          Github →
         </a>
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
