@@ -1,15 +1,18 @@
 import Image from "next/image";
-import "./globals.css";
 import { Button } from "@/components/ui/button";
+import "./globals.css";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { ArrowUpRightIcon } from "lucide-react";
+import { useTranslations } from "next-intl";
 
-export default function Home() {
+export default function HomePage() {
+  const t = useTranslations("home");
   return (
     <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
         <div className="titles-container">
-          <h1 className="font-josefin">Bonjour, je suis Marion</h1>
-          <h2 className="font-josefin">Développeuse web full-stack</h2>
+          <h1 className="font-roboto">{t("greeting")}</h1>
+          <h2 className="font-roboto">{t("title")}</h2>
         </div>
         <div className="flex gap-4 items-center flex-col sm:flex-row">
           <a
@@ -38,9 +41,10 @@ export default function Home() {
           <div className="flex flex-wrap items-center gap-2 md:flex-row">
             <Button
               variant="outline"
-              className="rounded-full items-center h-10 px-6 sm:h-12 md:px-8 font-medium text-sm sm:text-base"
+              className="rounded-full items-center h-10 px-6 sm:h-12 md:px-8 font-medium text-sm sm:text-base bg-foreground text-background hover:bg-accent-foreground hover:text-background"
             >
-              Me contacter
+              {t("contact")}
+              <ArrowUpRightIcon />
             </Button>
           </div>
         </div>

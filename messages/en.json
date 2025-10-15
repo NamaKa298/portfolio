@@ -1,0 +1,14 @@
+{
+  "home": {
+    "greeting": "Hello, I'm Marion",
+    "title": "Full-stack web developer",
+    "contact": "Contact me",
+    "viewProjects": "View my projects"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact me"
+  }
+}
