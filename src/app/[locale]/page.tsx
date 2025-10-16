@@ -17,11 +17,11 @@ export default function HomePage() {
               className=" rounded-full"
               src="/photo.webp"
               alt="Vercel logomark"
-              width={170}
-              height={170}
+              width={180}
+              height={180}
             />
           </div>
-          <div>
+          <div className="bg-gradient-to-r from-neutral-500 via-neutral-300 to-neutral-50 bg-clip-text text-transparent">
             <h1 className="font-roboto">{t("greeting")}</h1>
             <h2 className="font-roboto">{t("title")}</h2>
           </div>
@@ -37,8 +37,8 @@ export default function HomePage() {
           </a>
           <div className="flex flex-wrap items-center gap-2 md:flex-row">
             <Button
-              variant="outline"
-              className="rounded-full items-center h-10 px-6 sm:h-12 md:px-8 font-medium text-sm sm:text-base bg-foreground text-background hover:bg-accent-foreground hover:text-background"
+              variant="default"
+              className="rounded-full items-center h-10 px-6 sm:h-12 md:px-8 font-medium text-sm sm:text-base"
             >
               {t("contact")}
               <ArrowUpRightIcon />

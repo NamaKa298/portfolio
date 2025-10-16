@@ -115,14 +115,10 @@ export function ContactForm() {
                     />
                     <InputGroupAddon align="block-end">
                       <InputGroupText className="tabular-nums">
-                        {field.value.length}/100 characters
+                        {field.value.length}/500 characters
                       </InputGroupText>
                     </InputGroupAddon>
                   </InputGroup>
-                  <FieldDescription>
-                    Include steps to reproduce, expected behavior, and what
-                    actually happened.
-                  </FieldDescription>
                   {fieldState.invalid && (
                     <FieldError errors={[fieldState.error]} />
                   )}
@@ -133,8 +129,8 @@ export function ContactForm() {
         </form>
       </CardContent>
       <CardFooter>
-        <Field orientation="horizontal">
-          <Button type="submit" form="form-rhf-demo">
+        <Field orientation="horizontal" className="justify-center">
+          <Button className="rounded-full" type="submit" form="form-rhf-demo">
             {t("submit")}
           </Button>
         </Field>

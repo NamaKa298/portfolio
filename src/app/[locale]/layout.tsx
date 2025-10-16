@@ -47,7 +47,7 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className="blue">
+    <html lang={locale} className="dark">
       <body className={`${montserrat.variable} ${roboto.variable} antialiased`}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <LanguageSwitcher />
