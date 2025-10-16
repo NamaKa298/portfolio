@@ -10,5 +10,16 @@
     "about": "About",
     "projects": "Projects",
     "contact": "Contact me"
+  },
+  "form": {
+    "title": "Contact",
+    "description": "Want to create a website ? Fill out this form.",
+    "nameLabel": "Name (Optional)",
+    "namePlaceholder": "Your name",
+    "emailLabel": "Email",
+    "emailPlaceholder": "Your email",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Describe your project...",
+    "submit": "Send"
   }
 }

@@ -10,5 +10,16 @@
     "about": "À propos",
     "projects": "Projets",
     "contact": "Contactez-moi"
+  },
+  "form": {
+    "title": "Contact",
+    "description": "Envie de créer un site web ? Remplissez ce formulaire.",
+    "nameLabel": "Nom (Facultatif)",
+    "namePlaceholder": "Votre nom",
+    "emailLabel": "Email",
+    "emailPlaceholder": "Votre email",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Décrivez votre projet...",
+    "submit": "Envoyer"
   }
 }
