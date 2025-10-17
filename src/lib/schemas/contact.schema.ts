@@ -3,8 +3,12 @@ import * as z from "zod";
 export const formSchema = z.object({
   name: z
     .string()
-    .min(3, "Name must be at least 3 characters.")
-    .max(32, "Name must be at most 32 characters."),
+    .max(32, "Name must be at most 32 characters.")
+    .optional()
+    .or(z.literal(""))
+    .refine((val) => !val || val.length >= 3, {
+      message: "Name must be at least 3 characters if provided.",
+    }),
   email: z.string().email({ message: "Invalid email address." }),
   message: z
     .string()

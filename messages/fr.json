@@ -3,13 +3,8 @@
     "greeting": "Bonjour, je suis Marion",
     "title": "Développeuse web full-stack",
     "contact": "Contactez-moi",
-    "viewProjects": "Voir mes projets"
-  },
-  "nav": {
-    "home": "Accueil",
-    "about": "À propos",
-    "projects": "Projets",
-    "contact": "Contactez-moi"
+    "viewProjects": "Voir mes projets",
+    "projects": "Projets"
   },
   "form": {
     "title": "Contact",
