@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import "./globals.css";
@@ -8,6 +9,19 @@ import { ContactForm } from "@/components/form";
 
 export default function HomePage() {
   const t = useTranslations("home");
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const offset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
   return (
     <div className="font-sans item-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
       <main className="flex flex-col gap-[32px]">
@@ -21,7 +35,7 @@ export default function HomePage() {
               height={180}
             />
           </div>
-          <div className="bg-gradient-to-r from-neutral-500 via-neutral-300 to-neutral-50 bg-clip-text text-transparent">
+          <div>
             <h1 className="font-roboto">{t("greeting")}</h1>
             <h2 className="font-roboto">{t("title")}</h2>
           </div>
@@ -38,14 +52,17 @@ export default function HomePage() {
           <div className="flex flex-wrap items-center gap-2 md:flex-row">
             <Button
               variant="default"
-              className="rounded-full items-center h-10 px-6 sm:h-12 md:px-8 font-medium text-sm sm:text-base"
+              className="rounded-full items-center h-10 px-6 sm:h-12 md:px-8 font-medium text-sm sm:text-base hover:scale-105"
+              onClick={() => scrollToSection("contact")}
             >
               {t("contact")}
               <ArrowUpRightIcon />
             </Button>
           </div>
         </div>
-        <ContactForm />
+        <section id="contact">
+          <ContactForm />
+        </section>
       </main>
 
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
