@@ -66,9 +66,17 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-        <section id="projects" className="flex justify-center pb-10">
-          <h2 className="text-2xl font-bold">{t("projects")}</h2>
+        <section id="projects" className="flex pb-10">
+          <h3 className="font-roboto">{t("projects")}</h3>
           {/* Add your project content here */}
+        </section>
+        <section id="competencies" className="flex pb-10">
+          <h3 className="font-roboto">Competencies</h3>
+          {/* Add your competencies content here */}
+        </section>
+        <section id="about" className="flex pb-10">
+          <h3 className="font-roboto">About Me</h3>
+          {/* Add your about me content here */}
         </section>
         <section id="contact" className="flex justify-center pb-10">
           <ContactForm />
