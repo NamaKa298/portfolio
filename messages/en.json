@@ -4,7 +4,9 @@
     "title": "Full-stack web developer",
     "contact": "Contact me",
     "viewProjects": "View my projects",
-    "projects": "Projects"
+    "projects": "Projects",
+    "competencies": "Competencies",
+    "about": "About Me"
   },
   "form": {
     "title": "Contact",

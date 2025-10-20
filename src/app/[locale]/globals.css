@@ -22,18 +22,15 @@
 }
 
 h1.font-roboto {
-  font-weight: 700;
-  font-size: 6rem;
-  line-height: 1.05;
-  margin: 0;
+  font-weight: 600;
+  font-size: 4rem;
+  line-height: 1.1;
 }
 
 h2.font-roboto {
   font-weight: 600;
   font-size: 4rem;
   line-height: 1.1;
-  font-style: italic;
-  margin: 0;
 }
 
 h3.font-roboto {
