@@ -14,10 +14,9 @@ import {
   SiFigma,
   SiVercel,
 } from "react-icons/si";
-import { ReactElement } from "react";
-
+import { FaSass } from "react-icons/fa";
 // Mapping centralisé de TOUTES les icônes
-export const techIcons: Record<string, ReactElement> = {
+export const techIcons: Record<string, JSX.Element> = {
   // Frameworks
   "Next.js": <SiNextdotjs />,
   React: <SiReact />,
@@ -30,6 +29,7 @@ export const techIcons: Record<string, ReactElement> = {
   Tailwind: <SiTailwindcss />,
   CSS: <SiCss3 />,
   HTML: <SiHtml5 />,
+  Sass: <FaSass />,
 
   // Backend
   "Node.js": <SiNodedotjs />,
