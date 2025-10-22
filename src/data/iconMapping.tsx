@@ -18,7 +18,7 @@ import { FaSass } from "react-icons/fa";
 // Mapping centralisé de TOUTES les icônes
 export const techIcons: Record<string, JSX.Element> = {
   // Frameworks
-  "Next.js": <SiNextdotjs />,
+  'Next.js': <SiNextdotjs />,
   React: <SiReact />,
 
   // Langages
@@ -32,7 +32,7 @@ export const techIcons: Record<string, JSX.Element> = {
   Sass: <FaSass />,
 
   // Backend
-  "Node.js": <SiNodedotjs />,
+  'Node.js': <SiNodedotjs />,
   Express: <SiExpress />,
 
   // Databases

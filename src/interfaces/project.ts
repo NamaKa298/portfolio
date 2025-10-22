@@ -1,5 +1,3 @@
-import { ReactElement } from "react";
-
 export interface Project {
   id: string;
   title: string;
@@ -8,4 +6,6 @@ export interface Project {
   date: string;
   competences: string[];
   link: string;
+  font?: string;
+  logo?: string;
 }

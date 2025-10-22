@@ -24,13 +24,13 @@
 h1.font-roboto {
   font-weight: 600;
   font-size: 4rem;
-  line-height: 1.1;
+  line-height: 1.5;
 }
 
 h2.font-roboto {
   font-weight: 600;
   font-size: 4rem;
-  line-height: 1.1;
+  line-height: 1.5;
 }
 
 h3.font-roboto {
@@ -100,6 +100,24 @@ body {
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
+}
+
+@keyframes slide-down {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slide-down {
+  animation: slide-down 1s ease-in-out forwards;
 }
 
 @layer base {

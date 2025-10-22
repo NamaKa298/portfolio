@@ -1,5 +1,6 @@
 {
     "prettier.bracketSameLine": true,
     "prettier.endOfLine": "lf",
-    "prettier.requireConfig": true
+    "prettier.enableDebugLogs": false,
+    "prettier.htmlWhitespaceSensitivity": "strict"
 }
