@@ -25,12 +25,9 @@ h1.font-roboto {
   font-weight: 600;
   font-size: 4rem;
   line-height: 1.5;
-}
-
-h2.font-roboto {
-  font-weight: 600;
-  font-size: 4rem;
-  line-height: 1.5;
+  background: linear-gradient(111deg,#7d7d7d 14.07%,#fff 48.3%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 h3.font-roboto {
@@ -102,9 +99,9 @@ body {
   }
 }
 
-@keyframes slide-down {
+@keyframes slide-up {
   0% {
-    transform: translateY(-100%);
+    transform: translateY(100%);
     opacity: 0;
   }
   50% {
@@ -116,10 +113,63 @@ body {
   }
 }
 
-.slide-down {
-  animation: slide-down 1s ease-in-out forwards;
+@keyframes slide-up-from-left {
+  0% {
+    transform: translateX(-100%, 100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
+@keyframes slide-up-from-bottom-left {
+  0% {
+    transform: translate(-100%, 100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up-from-bottom-right {
+  0% {
+    transform: translate(100%, 100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+.slide-up {
+  animation: slide-up 0.5s ease-in-out forwards;
+}
+
+.slide-up-from-bottom-left {
+  animation: slide-up-from-bottom-left 0.5s ease-in-out forwards;
+}
+
+.slide-up-from-bottom-right {
+  animation: slide-up-from-bottom-right 0.5s ease-in-out forwards;
+}
+
+.Button {
+  border-radius: 0.75rem;
+}
 @layer base {
   * {
     @apply border-border;

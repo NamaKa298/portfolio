@@ -7,8 +7,9 @@ import { useTranslations } from "next-intl";
 import { ContactForm } from "@/components/form";
 import Projects from "@/components/projects";
 
+
 export default function HomePage() {
-  const t = useTranslations("home");
+  const t = useTranslations('home');
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -18,7 +19,7 @@ export default function HomePage() {
 
       window.scrollTo({
         top: offsetPosition,
-        behavior: "smooth",
+        behavior: 'smooth',
       });
     }
   };
@@ -27,27 +28,27 @@ export default function HomePage() {
       <main className="flex flex-col gap-[32px]">
         <section
           id="titleSection"
-          className="flex flex-col items-center justify-center bg-gradient-to-r from-gray-500 via-white to-white bg-clip-text text-transparent"
+          className="flex flex-col items-center justify-center"
         >
-          <h1 className="font-roboto slide-down">{t('greeting')}</h1>
-          <h2 className="font-roboto slide-down">{t('title')}</h2>
+          <h1 className="font-roboto slide-up">{t('greeting')}</h1>
+          <h1 className="font-roboto slide-up">{t('title')}</h1>
         </section>
         <section id="callToAction">
           <div className="flex gap-10 items-center justify-center flex-col sm:flex-row">
-            <div className="flex flex-wrap items-center gap-2 md:flex-row">
+            <div className="flex flex-wrap items-center gap-2 md:flex-row slide-up-from-bottom-left">
               <Button
                 variant="default"
-                className="rounded-full items-center h-10 px-6 sm:h-14 md:px-8 font-lg text-sm sm:text-xl bg-gradient-to-t from-gray-400 to-foreground hover:scale-105"
+                className=" items-center h-10 px-6 sm:h-14 md:px-8 font-lg text-sm sm:text-xl bg-gradient-to-t from-gray-400 to-foreground hover:scale-105"
                 onClick={() => scrollToSection('contact')}
               >
                 {t('contact')}
                 <ArrowUpRightIcon />
               </Button>
             </div>
-            <div className="flex flex-wrap items-center gap-2 md:flex-row">
+            <div className="flex flex-wrap items-center gap-2 md:flex-row slide-up-from-bottom-right">
               <Button
                 variant="outline"
-                className="rounded-full font-lg h-10 px-6 sm:h-14 md:px-8 text-sm sm:text-xl hover:scale-105 items-center border-foreground/30"
+                className="font-lg h-10 px-6 sm:h-14 md:px-8 text-sm sm:text-xl hover:scale-105 items-center border-foreground/30"
                 onClick={() => scrollToSection('projects')}
               >
                 {t('viewProjects')}

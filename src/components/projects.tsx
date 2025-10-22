@@ -54,7 +54,7 @@ export default function Projects() {
                         {project.description}
                       </p>
                       <div className="flex pt-10 pb-10 justify-center">
-                        <Button className="rounded-full text-lg p-6">
+                        <Button className="text-lg p-6">
                           {t('viewProject')} ↗
                         </Button>
                       </div>
