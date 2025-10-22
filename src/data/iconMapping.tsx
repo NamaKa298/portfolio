@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   SiNextdotjs,
   SiTypescript,
@@ -13,8 +14,8 @@ import {
   SiGit,
   SiFigma,
   SiVercel,
-} from "react-icons/si";
-import { FaSass } from "react-icons/fa";
+} from 'react-icons/si';
+import { FaSass } from 'react-icons/fa';
 // Mapping centralisé de TOUTES les icônes
 export const techIcons: Record<string, JSX.Element> = {
   // Frameworks
