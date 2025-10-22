@@ -17,7 +17,7 @@ import {
 } from 'react-icons/si';
 import { FaSass } from 'react-icons/fa';
 // Mapping centralisé de TOUTES les icônes
-export const techIcons: Record<string, JSX.Element> = {
+export const techIcons: Record<string, React.JSX.Element> = {
   // Frameworks
   'Next.js': <SiNextdotjs />,
   React: <SiReact />,
