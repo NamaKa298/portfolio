@@ -31,7 +31,7 @@ export default function Projects() {
             const fontClass = project.font ? fontClasses[project.font] : '';
             return (
               <AccordionItem value={project.id} key={project.id}>
-                <AccordionTrigger className="border-l border-t border-foreground/30 hover:border-foreground ">
+                <AccordionTrigger className="border-l border-t border-foreground/30 hover:border-foreground">
                   <div className="cursor-pointer">
                     <h3
                       className={`text-5xl pl-10 ${fontClass} flex flex-row items-center pb-4`}

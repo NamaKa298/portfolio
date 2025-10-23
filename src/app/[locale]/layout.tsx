@@ -3,28 +3,27 @@ import { Roboto, Montserrat } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { routing } from "@/i18n/routing";
-import { notFound } from "next/navigation";
-import { LanguageSwitcher } from "@/components/LanguageSwitcher";
-import "./globals.css";
+import { notFound } from 'next/navigation';
+import './globals.css';
 
 const montserrat = Montserrat({
-  variable: "--font-montserrat",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  display: "swap",
+  variable: '--font-montserrat',
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  display: 'swap',
 });
 
 const roboto = Roboto({
-  variable: "--font-roboto",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  style: ["normal", "italic"],
-  display: "swap",
+  variable: '--font-roboto',
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  style: ['normal', 'italic'],
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
-  title: "Marion Saint-Martin Fullstack ingénieure",
-  description: "Portfolio de Marion Saint-Martin",
+  title: 'Marion Saint-Martin Fullstack ingénieure',
+  description: 'Portfolio de Marion Saint-Martin',
 };
 
 export function generateStaticParams() {
@@ -50,7 +49,6 @@ export default async function LocaleLayout({
     <html lang={locale} className="dark">
       <body className={`${montserrat.variable} ${roboto.variable} antialiased`}>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <LanguageSwitcher />
           {children}
         </NextIntlClientProvider>
       </body>

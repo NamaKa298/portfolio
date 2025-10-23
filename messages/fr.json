@@ -1,18 +1,23 @@
 {
+  "header": {
+    "home": "Accueil",
+    "works": "Projets",
+    "contact": "Contactez-moi"
+  },
   "home": {
-    "greeting": "Bonjour, je suis Marion",
-    "title": "Développeuse web full-stack",
+    "title": "Bonjour, je suis Marion développeuse web full-stack",
+    "description": "Développeur fullstack polyvalent, je transforme les concepts en code avec précision et créativité. Je conçois des solutions sur mesure adaptées à vos besoins uniques, de l'idée à l'exécution.",
     "contact": "Contactez-moi",
     "viewProjects": "Voir mes projets",
-    "competencies": "COMPÉTENCES",
-    "about": "À PROPOS"
+    "competencies": "Compétences",
+    "about": "À propos"
   },
   "projects": {
-    "title": "PROJETS",
+    "title": "Projets",
     "viewProject": "Voir le projet"
   },
   "form": {
-    "title": "CONTACT",
+    "title": "Contact",
     "description": "Envie de créer un site web ? Remplissez ce formulaire.",
     "nameLabel": "Nom (Facultatif)",
     "namePlaceholder": "Votre nom",

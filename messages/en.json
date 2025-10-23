@@ -1,11 +1,16 @@
 {
+  "header": {
+    "home": "Home",
+    "works": "Works",
+    "contact": "Contact me"
+  },
   "home": {
-    "greeting": "Hi, I'm Marion",
-    "title": "Full-stack web developer",
+    "title": "Hi, I'm Marion full-stack web developer",
+    "description": "Versatile fullstack developer, I turn concepts into code with precision and creativity. I design custom solutions tailored to meet your unique needs, from idea to execution.",
     "contact": "Contact me",
     "viewProjects": "View my projects",
-    "competencies": "COMPETENCIES",
-    "about": "ABOUT"
+    "competencies": "Competencies",
+    "about": "About"
   },
   "projects": {
     "title": "Projects",

@@ -6,7 +6,7 @@ import { ArrowUpRightIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { ContactForm } from "@/components/form";
 import Projects from "@/components/projects";
-
+import { Header } from '@/components/Header';
 
 export default function HomePage() {
   const t = useTranslations('home');
@@ -24,38 +24,45 @@ export default function HomePage() {
     }
   };
   return (
-    <div className="font-sans item-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
+    <div>
+      <Header scrollToSection={scrollToSection} />
       <main className="flex flex-col gap-[32px]">
-        <section
-          id="titleSection"
-          className="flex flex-col items-center justify-center"
-        >
-          <h1 className="slide-up">{t('greeting')}</h1>
-          <h1 className="slide-up">{t('title')}</h1>
-        </section>
-        <section id="callToAction">
-          <div className="flex gap-10 items-center justify-center flex-col sm:flex-row">
-            <div className="flex flex-wrap items-center gap-2 md:flex-row slide-up-from-bottom-left w-full sm:flex-1 max-w-[10rem]">
-              <Button
-                variant="default"
-                className="items-center size-lg sm:h-14 md:px-8 font-lg text-sm sm:text-sm bg-gradient-to-t from-gray-400 to-foreground hover:scale-105 w-full justify-center rounded-xl"
-                onClick={() => scrollToSection('contact')}
-              >
-                {t('contact')}
-                <ArrowUpRightIcon />
-              </Button>
+        <header className="max-full mx-auto pt-20 md:pt-28 lg:pt-36 xl:pt-44 overflow-hidden relative text-center pb-56 md:pb-64 lg:pb-72">
+          <section
+            id="titleSection"
+            className="flex flex-col items-center justify-center"
+          >
+            <h1 className="slide-up text-5xl lg:text-6xl xl:text-7xl text-center font-normal px-2 mx:px-0 mb-3 md:mb-4 lg:mb-5 xl:mb-6 max-w-7xl mx-auto">
+              {t('title')}
+            </h1>
+            <p className="text-[#A9AAAB] mb-6 text-center mx-auto max-w-2xl text-sm xl:text-base px-2 mx:px-0 slide-up">
+              {t('description')}
+            </p>
+          </section>
+          <section id="callToAction">
+            <div className="flex gap-6 justify-center mb-16 md:mb-20 lg:mb-24 xl:mb-28">
+              <div className="flex flex-wrap items-center gap-2 md:flex-row slide-up-from-bottom-left w-full sm:flex-1 max-w-[10rem]">
+                <Button
+                  variant="default"
+                  className="items-center justify-center size-lg sm:h-14 md:px-8 font-lg text-sm sm:text-sm bg-gradient-to-t from-[#A9AAAB] to-[#FAFAFA] hover:scale-105 w-full rounded-xl"
+                  onClick={() => scrollToSection('contact')}
+                >
+                  {t('contact')}
+                  <ArrowUpRightIcon />
+                </Button>
+              </div>
+              <div className="flex flex-wrap items-center gap-2 md:flex-row slide-up-from-bottom-right w-full sm:flex-1 max-w-[10rem]">
+                <Button
+                  variant="outline"
+                  className="items-center font-lg size-lg sm:h-14 md:px-8 text-sm sm:text-sm hover:scale-105 border-foreground/30 w-full justify-center rounded-xl"
+                  onClick={() => scrollToSection('projects')}
+                >
+                  {t('viewProjects')}
+                </Button>
+              </div>
             </div>
-            <div className="flex flex-wrap items-center gap-2 md:flex-row slide-up-from-bottom-right w-full sm:flex-1 max-w-[10rem]">
-              <Button
-                variant="outline"
-                className="font-lg size-lg sm:h-14 md:px-8 text-sm sm:text-sm hover:scale-105 items-center border-foreground/30 w-full justify-center rounded-xl"
-                onClick={() => scrollToSection('projects')}
-              >
-                {t('viewProjects')}
-              </Button>
-            </div>
-          </div>
-        </section>
+          </section>
+        </header>
         <section id="projects" className="flex pt-20">
           <Projects />
         </section>
