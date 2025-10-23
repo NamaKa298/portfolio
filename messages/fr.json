@@ -4,13 +4,15 @@
     "title": "Développeuse web full-stack",
     "contact": "Contactez-moi",
     "viewProjects": "Voir mes projets",
-    "projects": "Projets",
-    "competencies": "Compétences",
-    "about": "À propos de moi",
+    "competencies": "COMPÉTENCES",
+    "about": "À PROPOS"
+  },
+  "projects": {
+    "title": "PROJETS",
     "viewProject": "Voir le projet"
   },
   "form": {
-    "title": "Contact",
+    "title": "CONTACT",
     "description": "Envie de créer un site web ? Remplissez ce formulaire.",
     "nameLabel": "Nom (Facultatif)",
     "namePlaceholder": "Votre nom",

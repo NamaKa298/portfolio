@@ -1,12 +1,14 @@
 {
   "home": {
-    "greeting": "Hello, I'm Marion",
+    "greeting": "Hi, I'm Marion",
     "title": "Full-stack web developer",
     "contact": "Contact me",
     "viewProjects": "View my projects",
-    "projects": "Projects",
-    "competencies": "Competencies",
-    "about": "About Me",
+    "competencies": "COMPETENCIES",
+    "about": "ABOUT"
+  },
+  "projects": {
+    "title": "Projects",
     "viewProject": "View Project"
   },
   "form": {

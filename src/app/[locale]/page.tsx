@@ -30,25 +30,25 @@ export default function HomePage() {
           id="titleSection"
           className="flex flex-col items-center justify-center"
         >
-          <h1 className="font-roboto slide-up">{t('greeting')}</h1>
-          <h1 className="font-roboto slide-up">{t('title')}</h1>
+          <h1 className="slide-up">{t('greeting')}</h1>
+          <h1 className="slide-up">{t('title')}</h1>
         </section>
         <section id="callToAction">
           <div className="flex gap-10 items-center justify-center flex-col sm:flex-row">
-            <div className="flex flex-wrap items-center gap-2 md:flex-row slide-up-from-bottom-left">
+            <div className="flex flex-wrap items-center gap-2 md:flex-row slide-up-from-bottom-left w-full sm:flex-1 max-w-[10rem]">
               <Button
                 variant="default"
-                className=" items-center h-10 px-6 sm:h-14 md:px-8 font-lg text-sm sm:text-xl bg-gradient-to-t from-gray-400 to-foreground hover:scale-105"
+                className="items-center size-lg sm:h-14 md:px-8 font-lg text-sm sm:text-sm bg-gradient-to-t from-gray-400 to-foreground hover:scale-105 w-full justify-center rounded-xl"
                 onClick={() => scrollToSection('contact')}
               >
                 {t('contact')}
                 <ArrowUpRightIcon />
               </Button>
             </div>
-            <div className="flex flex-wrap items-center gap-2 md:flex-row slide-up-from-bottom-right">
+            <div className="flex flex-wrap items-center gap-2 md:flex-row slide-up-from-bottom-right w-full sm:flex-1 max-w-[10rem]">
               <Button
                 variant="outline"
-                className="font-lg h-10 px-6 sm:h-14 md:px-8 text-sm sm:text-xl hover:scale-105 items-center border-foreground/30"
+                className="font-lg size-lg sm:h-14 md:px-8 text-sm sm:text-sm hover:scale-105 items-center border-foreground/30 w-full justify-center rounded-xl"
                 onClick={() => scrollToSection('projects')}
               >
                 {t('viewProjects')}
@@ -60,11 +60,11 @@ export default function HomePage() {
           <Projects />
         </section>
         <section id="competencies" className="flex pb-10">
-          <h2 className="font-roboto pt-20">{t('competencies')}</h2>
+          <h2 className="pt-20">{t('competencies')}</h2>
           {/* Add your competencies content here */}
         </section>
         <section id="about" className="flex pb-10">
-          <h2 className="font-roboto pt-20">{t('about')}</h2>
+          <h2 className="pt-20">{t('about')}</h2>
           {/* Add your about me content here */}
         </section>
         <section id="contact" className="flex justify-center pb-10">

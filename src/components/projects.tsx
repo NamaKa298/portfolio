@@ -20,11 +20,11 @@ const fontClasses: { [key: string]: string } = {
 };
 
 export default function Projects() {
-  const t = useTranslations('home');
+  const t = useTranslations('projects');
 
   return (
     <div className="w-full">
-      <h2 className="font-roboto text-3xl mb-6 pb-5">{t('projects')}</h2>
+      <h2 className="text-5xl mb-6 pb-5">{t('title')}</h2>
       <Accordion type="single" collapsible>
         <div className="flex flex-col gap-4">
           {projects.map((project) => {
@@ -54,7 +54,7 @@ export default function Projects() {
                         {project.description}
                       </p>
                       <div className="flex pt-10 pb-10 justify-center">
-                        <Button className="text-lg p-6">
+                        <Button className="text-sm p-6 rounded-lg hover:scale-105">
                           {t('viewProject')} ↗
                         </Button>
                       </div>
