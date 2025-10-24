@@ -3,7 +3,7 @@ import { useTranslations } from 'next-intl';
 import { Button } from './ui/button';
 import { ArrowUpRightIcon } from 'lucide-react';
 
-export const Header = ({
+export const Navbar = ({
   scrollToSection,
 }: {
   scrollToSection: (id: string) => void;
@@ -18,7 +18,10 @@ export const Header = ({
       <nav className="flex justify-between slide-down">
         <ul className="hidden xl:flex xl:w-full gap-6 items-center justify-between ">
           <li className="duration-300 hover:duration-300">
-            <a className="group flex gap-3" href="#about">
+            <a
+              className="group flex gap-3"
+              onClick={() => scrollToSection('about')}
+            >
               <div className="text-[#71717A] duration-300 group-hover:text-white">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -38,7 +41,10 @@ export const Header = ({
             </a>
           </li>
           <li className="duration-300 hover:duration-300">
-            <a className="group flex gap-3" href="#projects">
+            <a
+              className="group flex gap-3"
+              onClick={() => scrollToSection('projects')}
+            >
               <div className="text-[#71717A] duration-300 group-hover:text-white">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

@@ -23,7 +23,7 @@ export default function Projects() {
   const t = useTranslations('projects');
 
   return (
-    <div className="w-full pt-20">
+    <div className="w-full">
       <h2 className="text-5xl mb-6 pb-5">{t('title')}</h2>
       <Accordion type="single" collapsible>
         <div className="flex flex-col gap-4">

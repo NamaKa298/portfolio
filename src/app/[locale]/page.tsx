@@ -6,7 +6,7 @@ import { ArrowUpRightIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { ContactForm } from "@/components/form";
 import Projects from "@/components/projects";
-import { Header } from '@/components/Header';
+import { Navbar } from '@/components/navbar';
 
 export default function HomePage() {
   const t = useTranslations('home');
@@ -25,7 +25,7 @@ export default function HomePage() {
   };
   return (
     <div className="max-w-screen-xl mx-auto w-full">
-      <Header scrollToSection={scrollToSection} />
+      <Navbar scrollToSection={scrollToSection} />
       <main className="flex flex-col gap-[32px]">
         <header className="max-full mx-auto pt-20 md:pt-28 lg:pt-36 xl:pt-44 overflow-hidden relative text-center pb-56 md:pb-64 lg:pb-0">
           <section
@@ -41,7 +41,10 @@ export default function HomePage() {
           </section>
           <section id="callToAction">
             <div className="flex gap-6 justify-center mb-16 md:mb-20 lg:mb-24 xl:mb-28">
-              <div className="flex flex-wrap items-center gap-2 md:flex-row slide-up-from-bottom-left w-full sm:flex-1 max-w-[10rem]">
+              <div
+                id="contact"
+                className="flex flex-wrap items-center gap-2 md:flex-row slide-up-from-bottom-left w-full sm:flex-1 max-w-[10rem]"
+              >
                 <Button
                   variant="default"
                   className="items-center justify-center size-lg sm:h-11 md:px-8 font-lg text-sm sm:text-sm bg-gradient-to-t from-[#A9AAAB] to-[#FAFAFA] hover:scale-105 w-full rounded-xl"
@@ -51,7 +54,10 @@ export default function HomePage() {
                   <ArrowUpRightIcon />
                 </Button>
               </div>
-              <div className="flex flex-wrap items-center gap-2 md:flex-row slide-up-from-bottom-right w-full sm:flex-1 max-w-[10rem]">
+              <div
+                id="projects"
+                className="flex flex-wrap items-center gap-2 md:flex-row slide-up-from-bottom-right w-full sm:flex-1 max-w-[10rem]"
+              >
                 <Button
                   variant="outline"
                   className="items-center font-lg size-lg sm:h-11 md:px-8 text-sm sm:text-sm hover:scale-105 border-foreground/30 w-full justify-center rounded-xl"
@@ -67,7 +73,7 @@ export default function HomePage() {
           <Projects />
         </section>
         <section id="about" className="flex pb-10">
-          <h2 className="pt-20">{t('about')}</h2>
+          <h2 className="pt-10">{t('about')}</h2>
           {/* Add your about me content here */}
         </section>
         <section id="contact" className="flex justify-center pb-10">
