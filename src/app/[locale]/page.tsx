@@ -6,7 +6,7 @@ import { ArrowUpRightIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { ContactForm } from "@/components/form";
 import Projects from "@/components/projects";
-import { Header } from '@/components/header';
+import { Header } from '@/components/Header';
 
 export default function HomePage() {
   const t = useTranslations('home');
