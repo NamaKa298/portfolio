@@ -8,6 +8,7 @@ import { ContactForm } from "@/components/form";
 import Projects from "@/components/projects";
 import { Navbar } from '@/components/navbar';
 
+
 export default function HomePage() {
   const t = useTranslations('home');
   const scrollToSection = (sectionId: string) => {
@@ -74,7 +75,6 @@ export default function HomePage() {
         </section>
         <section id="about" className="flex pb-10">
           <h2 className="pt-10">{t('about')}</h2>
-          {/* Add your about me content here */}
         </section>
         <section id="contact" className="flex justify-center pb-10">
           <ContactForm />
