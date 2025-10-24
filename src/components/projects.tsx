@@ -63,11 +63,11 @@ export default function Projects() {
                 </AccordionTrigger>
                 <AccordionContent>
                   <div className="flex flex-row">
-                    <div className="w-1/3 pl-4">
-                      <p className="text-sm text-muted-foreground italic pb-4">
+                    <div className="w-2/5">
+                      <p className="p-4 text-sm text-muted-foreground italic">
                         {project.date}
                       </p>
-                      <p className="mb-4 text-justify text-lg">
+                      <p className="p-4 text-justify text-lg">
                         {project.description}
                       </p>
                       <div className="flex pt-10 pb-10 justify-center">
@@ -75,7 +75,7 @@ export default function Projects() {
                           {t('viewProject')} ↗
                         </Button>
                       </div>
-                      <div className="flex gap-3 pt-4">
+                      <div className="flex gap-3 p-4">
                         {project.competences.map((tech) => {
                           const icon = techIcons[tech];
                           return (
@@ -93,11 +93,13 @@ export default function Projects() {
                         })}
                       </div>
                     </div>
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-2/3 ml-20 rounded-lg"
-                    />
+                    <div className="w-3/5 ml-20 mr-4 rounded-lg overflow-hidden">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-auto object-contain rounded-lg"
+                      />
+                    </div>
                   </div>
                 </AccordionContent>
               </AccordionItem>
