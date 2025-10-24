@@ -6,7 +6,7 @@ import { ArrowUpRightIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { ContactForm } from "@/components/form";
 import Projects from "@/components/projects";
-import { Header } from '@/components/Header';
+import { Header } from '@/components/header';
 
 export default function HomePage() {
   const t = useTranslations('home');
@@ -24,10 +24,10 @@ export default function HomePage() {
     }
   };
   return (
-    <div>
+    <div className="max-w-screen-xl mx-auto w-full">
       <Header scrollToSection={scrollToSection} />
       <main className="flex flex-col gap-[32px]">
-        <header className="max-full mx-auto pt-20 md:pt-28 lg:pt-36 xl:pt-44 overflow-hidden relative text-center pb-56 md:pb-64 lg:pb-72">
+        <header className="max-full mx-auto pt-20 md:pt-28 lg:pt-36 xl:pt-44 overflow-hidden relative text-center pb-56 md:pb-64 lg:pb-0">
           <section
             id="titleSection"
             className="flex flex-col items-center justify-center"
@@ -44,7 +44,7 @@ export default function HomePage() {
               <div className="flex flex-wrap items-center gap-2 md:flex-row slide-up-from-bottom-left w-full sm:flex-1 max-w-[10rem]">
                 <Button
                   variant="default"
-                  className="items-center justify-center size-lg sm:h-14 md:px-8 font-lg text-sm sm:text-sm bg-gradient-to-t from-[#A9AAAB] to-[#FAFAFA] hover:scale-105 w-full rounded-xl"
+                  className="items-center justify-center size-lg sm:h-11 md:px-8 font-lg text-sm sm:text-sm bg-gradient-to-t from-[#A9AAAB] to-[#FAFAFA] hover:scale-105 w-full rounded-xl"
                   onClick={() => scrollToSection('contact')}
                 >
                   {t('contact')}
@@ -54,7 +54,7 @@ export default function HomePage() {
               <div className="flex flex-wrap items-center gap-2 md:flex-row slide-up-from-bottom-right w-full sm:flex-1 max-w-[10rem]">
                 <Button
                   variant="outline"
-                  className="items-center font-lg size-lg sm:h-14 md:px-8 text-sm sm:text-sm hover:scale-105 border-foreground/30 w-full justify-center rounded-xl"
+                  className="items-center font-lg size-lg sm:h-11 md:px-8 text-sm sm:text-sm hover:scale-105 border-foreground/30 w-full justify-center rounded-xl"
                   onClick={() => scrollToSection('projects')}
                 >
                   {t('viewProjects')}
@@ -63,7 +63,7 @@ export default function HomePage() {
             </div>
           </section>
         </header>
-        <section id="projects" className="flex pt-20">
+        <section id="projects" className="flex">
           <Projects />
         </section>
         <section id="competencies" className="flex pb-10">

@@ -23,7 +23,7 @@ export default function Projects() {
   const t = useTranslations('projects');
 
   return (
-    <div className="w-full">
+    <div className="w-full pt-20">
       <h2 className="text-5xl mb-6 pb-5">{t('title')}</h2>
       <Accordion type="single" collapsible>
         <div className="flex flex-col gap-4">
@@ -32,9 +32,9 @@ export default function Projects() {
             return (
               <AccordionItem value={project.id} key={project.id}>
                 <AccordionTrigger className="border-l border-t border-foreground/30 hover:border-foreground">
-                  <div className="cursor-pointer">
+                  <div className="cursor-pointer flex flex-row items-center justify-between w-full">
                     <h3
-                      className={`text-5xl pl-10 ${fontClass} flex flex-row items-center pb-4`}
+                      className={`text-5xl pl-10 ${fontClass} flex flex-row pr-10`}
                     >
                       {/*} {project.logo && (
                         <img src={project.logo} className="w-20 h-20" />
@@ -42,11 +42,28 @@ export default function Projects() {
                         */}
                       {project.title}
                     </h3>
+                    <div className="flex pr-10">
+                      {project.competences.map((tech) => {
+                        const icon = techIcons[tech];
+                        return (
+                          <div key={tech}>
+                            {icon && (
+                              <div
+                                className="text-5xl w-15 h-15 pl-5 opacity-50 hover:opacity-100"
+                                title={tech}
+                              >
+                                {icon}
+                              </div>
+                            )}
+                          </div>
+                        );
+                      })}
+                    </div>
                   </div>
                 </AccordionTrigger>
                 <AccordionContent>
                   <div className="flex flex-row">
-                    <div className="w-1/3">
+                    <div className="w-1/3 pl-4">
                       <p className="text-sm text-muted-foreground italic pb-4">
                         {project.date}
                       </p>

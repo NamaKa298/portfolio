@@ -48,9 +48,9 @@ export function ContactForm() {
   return (
     <Card className="w-full max-w-7xl shadow-2xl shadow-blue-600/90">
       <CardHeader className="text-4xl">
-        <CardTitle>{t("title")}</CardTitle>
+        <CardTitle>{t('title')}</CardTitle>
         <CardDescription className="text-xl">
-          {t("description")}
+          {t('description')}
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -63,14 +63,14 @@ export function ContactForm() {
                 render={({ field, fieldState }) => (
                   <Field data-invalid={fieldState.invalid}>
                     <FieldLabel htmlFor="form-name">
-                      {t("nameLabel")}
+                      {t('nameLabel')}
                     </FieldLabel>
                     <Input
                       {...field}
                       className="border border-foreground shadow-md shadow-foreground/50 !text-lg"
                       id="form-name"
                       aria-invalid={fieldState.invalid}
-                      placeholder={t("namePlaceholder")}
+                      placeholder={t('namePlaceholder')}
                       autoComplete="off"
                     />
                     {fieldState.invalid && (
@@ -85,14 +85,14 @@ export function ContactForm() {
                 render={({ field, fieldState }) => (
                   <Field data-invalid={fieldState.invalid}>
                     <FieldLabel htmlFor="form-email">
-                      {t("emailLabel")}
+                      {t('emailLabel')}
                     </FieldLabel>
                     <Input
                       {...field}
                       className="border border-foreground shadow-md shadow-foreground/50 !text-lg"
                       id="form-email"
                       aria-invalid={fieldState.invalid}
-                      placeholder={t("emailPlaceholder")}
+                      placeholder={t('emailPlaceholder')}
                       autoComplete="off"
                     />
                     {fieldState.invalid && (
@@ -108,12 +108,12 @@ export function ContactForm() {
               render={({ field, fieldState }) => (
                 <Field data-invalid={fieldState.invalid}>
                   <FieldLabel htmlFor="form-message">
-                    {t("messageLabel")}
+                    {t('messageLabel')}
                   </FieldLabel>
                   <InputGroupTextarea
                     {...field}
                     id="form-message"
-                    placeholder={t("messagePlaceholder")}
+                    placeholder={t('messagePlaceholder')}
                     rows={6}
                     className="min-h-24 rounded-md resize-none border border-foreground shadow-md shadow-foreground/50 focus-visible:ring-1 focus-visible:outline-none focus-visible:ring-ring !text-lg"
                     aria-invalid={fieldState.invalid}
@@ -139,7 +139,7 @@ export function ContactForm() {
             type="submit"
             form="form"
           >
-            {t("submit")}
+            {t('submit')}
           </Button>
         </Field>
       </CardFooter>

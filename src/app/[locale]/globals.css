@@ -69,6 +69,7 @@ body {
   min-height: 100vh;
   color: hsl(var(--foreground));
 }
+
 @media (min-width: 1280px) {
   .xl\:text-base {
     font-size: 1rem;
@@ -99,7 +100,7 @@ body {
   max-width: 42rem;
 }
 
-mb-6 {
+.mb-6 {
   margin-bottom: 1.5rem;
 }
 
@@ -168,9 +169,27 @@ mb-6 {
   0% {
     transform: translateY(100%);
     opacity: 0;
+    filter: blur(10px);
   }
   50% {
     opacity: 0.5;
+    filter: blur(2px);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-down {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+    filter: blur(10px);
+  }
+  50% {
+    opacity: 0.5;
+    filter: blur(2px);
   }
   100% {
     transform: translateY(0);
@@ -182,9 +201,11 @@ mb-6 {
   0% {
     transform: translateX(-100%, 100%);
     opacity: 0;
+        filter: blur(10px);
   }
   50% {
     opacity: 0.5;
+        filter: blur(2px);
   }
   100% {
     transform: translateY(0);
@@ -196,9 +217,11 @@ mb-6 {
   0% {
     transform: translate(-100%, 100%);
     opacity: 0;
+    filter: blur(10px);
   }
   50% {
     opacity: 0.5;
+    filter: blur(2px);
   }
   100% {
     transform: translate(0, 0);
@@ -210,9 +233,11 @@ mb-6 {
   0% {
     transform: translate(100%, 100%);
     opacity: 0;
+    filter: blur(10px);
   }
   50% {
     opacity: 0.5;
+    filter: blur(2px);
   }
   100% {
     transform: translate(0, 0);
@@ -221,15 +246,34 @@ mb-6 {
 }
 
 .slide-up {
-  animation: slide-up 0.5s ease-in-out forwards;
+  animation: slide-up 0.8s ease-in-out forwards;
+}
+.slide-down {
+  animation: slide-down 0.8s ease-in-out forwards;
 }
 
 .slide-up-from-bottom-left {
-  animation: slide-up-from-bottom-left 0.5s ease-in-out forwards;
+  animation: slide-up-from-bottom-left 0.8s ease-in-out forwards;
 }
 
 .slide-up-from-bottom-right {
-  animation: slide-up-from-bottom-right 0.5s ease-in-out forwards;
+  animation: slide-up-from-bottom-right 0.8s ease-in-out forwards;
+}
+
+.aurora-element {
+  background: radial-gradient(circle, cyan, transparent);
+  mix-blend-mode: lighten;
+}
+
+.glow-text {
+  color: white;
+  text-shadow: 0 0 20px cyan;
+  mix-blend-mode: lighten;
+}
+
+.light-effect {
+  background: white;
+  mix-blend-mode: lighten;
 }
 
 @layer base {

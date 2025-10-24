@@ -15,8 +15,8 @@ export const Header = ({
       className="px-5 sm:px-12 md:px-24 lg:px-32 xl:px-48 font-onest container mx-auto py-6"
       style={{ opacity: 1, transform: 'none' }}
     >
-      <nav className="flex justify-between">
-        <ul className="hidden xl:flex xl:w-1/3 gap-6 items-center justify-center">
+      <nav className="flex justify-between slide-down">
+        <ul className="hidden xl:flex xl:w-full gap-6 items-center justify-between ">
           <li className="duration-300 hover:duration-300">
             <a className="group flex gap-3" href="/">
               <div className="text-[#71717A] duration-300 group-hover:text-white">
@@ -38,7 +38,7 @@ export const Header = ({
             </a>
           </li>
           <li className="duration-300 hover:duration-300">
-            <a className="group flex gap-3" href="/">
+            <a className="group flex gap-3" href="#projects">
               <div className="text-[#71717A] duration-300 group-hover:text-white">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +61,7 @@ export const Header = ({
             <div className="flex flex-wrap items-center gap-2 md:flex-row w-full sm:flex-1 max-w-[10rem]">
               <Button
                 variant="default"
-                className="items-center justify-center size-lg sm:h-14 md:px-8 font-lg text-sm sm:text-sm bg-gradient-to-t from-[#A9AAAB] to-[#FAFAFA] hover:scale-105 w-full rounded-xl"
+                className="items-center justify-center size-lg sm:h-11 md:px-8 font-lg text-sm sm:text-sm bg-gradient-to-t from-[#A9AAAB] to-[#FAFAFA] hover:scale-105 w-full rounded-xl"
                 onClick={() => scrollToSection('contact')}
               >
                 {t('contact')}
@@ -69,8 +69,10 @@ export const Header = ({
               </Button>
             </div>
           </li>
+          <li>
+            <LanguageSwitcher />
+          </li>
         </ul>
-        <LanguageSwitcher />
       </nav>
     </header>
   );
