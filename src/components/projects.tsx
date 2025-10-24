@@ -49,7 +49,7 @@ export default function Projects() {
                           <div key={tech}>
                             {icon && (
                               <div
-                                className="text-5xl w-15 h-15 pl-5 opacity-50 hover:opacity-100"
+                                className="text-5xl w-15 h-15 pl-5 opacity-50"
                                 title={tech}
                               >
                                 {icon}

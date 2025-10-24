@@ -2,7 +2,8 @@
   "header": {
     "home": "Home",
     "works": "Works",
-    "contact": "Contact me"
+    "contact": "Contact me",
+    "about": "About"
   },
   "home": {
     "title": "Hi, I'm Marion, full-stack web developer",

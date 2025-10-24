@@ -18,7 +18,7 @@ export const Header = ({
       <nav className="flex justify-between slide-down">
         <ul className="hidden xl:flex xl:w-full gap-6 items-center justify-between ">
           <li className="duration-300 hover:duration-300">
-            <a className="group flex gap-3" href="/">
+            <a className="group flex gap-3" href="#about">
               <div className="text-[#71717A] duration-300 group-hover:text-white">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -34,7 +34,7 @@ export const Header = ({
                   ></path>
                 </svg>
               </div>
-              <span>{t('home')}</span>
+              <span>{t('about')}</span>
             </a>
           </li>
           <li className="duration-300 hover:duration-300">

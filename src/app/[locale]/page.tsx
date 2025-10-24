@@ -66,10 +66,6 @@ export default function HomePage() {
         <section id="projects" className="flex">
           <Projects />
         </section>
-        <section id="competencies" className="flex pb-10">
-          <h2 className="pt-20">{t('competencies')}</h2>
-          {/* Add your competencies content here */}
-        </section>
         <section id="about" className="flex pb-10">
           <h2 className="pt-20">{t('about')}</h2>
           {/* Add your about me content here */}

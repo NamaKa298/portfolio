@@ -2,7 +2,8 @@
   "header": {
     "home": "Accueil",
     "works": "Projets",
-    "contact": "Contactez-moi"
+    "contact": "Contactez-moi",
+    "about": "À propos"
   },
   "home": {
     "title": "Bonjour, je suis Marion, développeuse web full-stack",
