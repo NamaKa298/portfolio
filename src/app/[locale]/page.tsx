@@ -7,7 +7,7 @@ import { useTranslations } from "next-intl";
 import { ContactForm } from "@/components/form";
 import Projects from "@/components/projects";
 import { Navbar } from '@/components/navbar';
-
+import About from '@/components/about';
 
 export default function HomePage() {
   const t = useTranslations('home');
@@ -43,7 +43,7 @@ export default function HomePage() {
           <section id="callToAction">
             <div className="flex gap-6 justify-center mb-16 md:mb-20 lg:mb-24 xl:mb-28">
               <div
-                id="contact"
+                id="contactcallToAction"
                 className="flex flex-wrap items-center gap-2 md:flex-row slide-up-from-bottom-left w-full sm:flex-1 max-w-[10rem]"
               >
                 <Button
@@ -56,7 +56,7 @@ export default function HomePage() {
                 </Button>
               </div>
               <div
-                id="projects"
+                id="projectscallToAction"
                 className="flex flex-wrap items-center gap-2 md:flex-row slide-up-from-bottom-right w-full sm:flex-1 max-w-[10rem]"
               >
                 <Button
@@ -73,8 +73,9 @@ export default function HomePage() {
         <section id="projects" className="flex">
           <Projects />
         </section>
-        <section id="about" className="flex pb-10">
+        <section id="about" className="flex">
           <h2 className="pt-10">{t('about')}</h2>
+          <About />
         </section>
         <section id="contact" className="flex justify-center pb-10">
           <ContactForm />

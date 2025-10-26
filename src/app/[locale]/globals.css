@@ -283,13 +283,13 @@ body {
   opacity: 0;
 }
 
-#callToAction #contact{
+#callToAction #contactcallToAction{
     animation: slide-up-from-bottom-left 0.8s ease-in-out forwards;
   animation-delay: 0.6s;
   opacity: 0;
 }
 
-#callToAction #projects{
+#callToAction #projectscallToAction{
     animation: slide-up-from-bottom-right 0.8s ease-in-out forwards;
   animation-delay: 0.6s;
   opacity: 0;
