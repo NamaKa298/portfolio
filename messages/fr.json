@@ -7,7 +7,7 @@
   },
   "home": {
     "title": "Bonjour, je suis Marion, développeuse web full-stack",
-    "description": "Développeur fullstack polyvalent, je transforme les concepts en code avec précision et créativité. Je conçois des solutions sur mesure adaptées à vos besoins uniques, de l'idée à l'exécution.",
+    "description": "Développeuse fullstack polyvalente, je transforme les concepts en code avec précision et créativité. Je conçois des solutions sur mesure adaptées à vos besoins uniques, de l'idée à l'exécution.",
     "contact": "Contactez-moi",
     "viewProjects": "Voir mes projets",
     "competencies": "Compétences",
@@ -16,6 +16,12 @@
   "projects": {
     "title": "Projets",
     "viewProject": "Voir le projet"
+  },
+  "about": {
+    "title": "À propos",
+    "description": "Je suis Marion, une développeuse web full-stack passionnée. Avec une expertise à la fois dans les technologies front-end et back-end, je donne vie aux idées grâce à un code propre et des solutions innovantes.\n Intéressé/ée par la création d'un projet, par la collaboration ou par mon profil ? Tu peux me retrouver sur les réseaux suivant pour échanger !",
+    "cv": "Télécharger mon CV",
+    "tools": "Mes outils :"
   },
   "form": {
     "title": "Contact",

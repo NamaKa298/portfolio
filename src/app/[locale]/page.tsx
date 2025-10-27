@@ -8,6 +8,7 @@ import { ContactForm } from "@/components/form";
 import Projects from "@/components/projects";
 import { Navbar } from '@/components/navbar';
 import About from '@/components/about';
+import ContactModal from '@/components/contactModal';
 
 export default function HomePage() {
   const t = useTranslations('home');
@@ -70,16 +71,16 @@ export default function HomePage() {
             </div>
           </section>
         </header>
-        <section id="projects" className="flex">
+        <section id="projects" className="flex sm:pb-56">
           <Projects />
         </section>
-        <section id="about" className="flex">
-          <h2 className="pt-10">{t('about')}</h2>
+        <section id="about" className="flex sm:pb-56">
           <About />
         </section>
         <section id="contact" className="flex justify-center pb-10">
           <ContactForm />
         </section>
+        <ContactModal />
       </main>
 
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
