@@ -8,7 +8,6 @@ import { ContactForm } from "@/components/form";
 import Projects from "@/components/projects";
 import { Navbar } from '@/components/navbar';
 import About from '@/components/about';
-import ContactModal from '@/components/contactModal';
 
 export default function HomePage() {
   const t = useTranslations('home');
@@ -80,7 +79,6 @@ export default function HomePage() {
         <section id="contact" className="flex justify-center pb-10">
           <ContactForm />
         </section>
-        <ContactModal />
       </main>
 
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">

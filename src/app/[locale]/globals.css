@@ -79,6 +79,10 @@ body {
   }
 }
 
+.fixed {
+  position: fixed;
+}
+
 .text-\[\#A9AAAB\] {
   --tw-text-opacity: 1;
   color: rgb(169 170 171/var(--tw-text-opacity,1));

@@ -10,7 +10,6 @@ import {
 
 import { Calligraffitti, Poppins } from 'next/font/google';
 import { Button } from './ui/button';
-import { ArrowUpRightIcon } from 'lucide-react';
 
 const calligraffitti = Calligraffitti({ subsets: ['latin'], weight: '400' });
 const poppins = Poppins({ subsets: ['latin'], weight: '600' });
@@ -73,7 +72,7 @@ export default function Projects() {
                       </p>
                       <div className="flex pt-10 pb-10 justify-center">
                         <Button className="items-center justify-center size-lg sm:h-11 md:px-8 font-lg text-sm sm:text-sm bg-gradient-to-t from-[#A9AAAB] to-[#FAFAFA] hover:scale-105 rounded-xl p-6">
-                          {t('viewProject')} <ArrowUpRightIcon />
+                          {t('viewProject')} ↗
                         </Button>
                       </div>
                       <div className="flex gap-3 p-4 flex-wrap">
