@@ -3,17 +3,16 @@ import { Button } from "@/components/ui/button";
 import "./globals.css";
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import { ArrowUpRightIcon } from 'lucide-react';
-import { useTranslations, useLocale } from 'next-intl';
+import { useTranslations } from 'next-intl';
 import { ContactForm } from '@/components/form';
 import Projects from '@/components/projects';
 import { Navbar } from '@/components/navbar';
 import About from '@/components/about';
-import Link from 'next/link';
 import { scrollToSection } from '@/lib/scrollToSection';
+import { ScrollReveal } from '@/components/ui/ScrollReveal';
 
 export default function HomePage() {
   const t = useTranslations('home');
-  const locale = useLocale();
 
   return (
     <div className="max-w-screen-xl mx-auto w-full">
@@ -37,15 +36,14 @@ export default function HomePage() {
                 id="contactcallToAction"
                 className="flex flex-wrap items-center gap-2 md:flex-row slide-up-from-bottom-left w-full sm:flex-1 max-w-[10rem]"
               >
-                <Link href={`/${locale}/contact`} className="w-full">
-                  <Button
-                    variant="default"
-                    className="items-center justify-center size-lg sm:h-11 md:px-8 font-lg text-sm sm:text-sm bg-gradient-to-t from-[#A9AAAB] to-[#FAFAFA] hover:scale-105 w-full rounded-xl"
-                  >
-                    {t('contact')}
-                    <ArrowUpRightIcon />
-                  </Button>
-                </Link>
+                <Button
+                  variant="default"
+                  className="items-center justify-center size-lg sm:h-11 md:px-8 font-lg text-sm sm:text-sm bg-gradient-to-t from-[#A9AAAB] to-[#FAFAFA] hover:scale-105 w-full rounded-xl"
+                  onClick={() => scrollToSection('projects')}
+                >
+                  {t('contact')}
+                  <ArrowUpRightIcon />
+                </Button>
               </div>
               <div
                 id="projectscallToAction"
@@ -68,14 +66,17 @@ export default function HomePage() {
             {''}
           </div>
         </header>
-
-        <section id="projects" className="flex sm:pb-56">
-          <Projects />
-        </section>
-        <section id="about" className="flex sm:pb-56">
-          <About />
-        </section>
-
+        <ScrollReveal>
+          <section id="projects" className="flex sm:pb-56">
+            <Projects />
+          </section>
+          <section id="about" className="flex sm:pb-56">
+            <About />
+          </section>
+          <section id="contact" className="flex sm:pb-56">
+            <ContactForm />
+          </section>
+        </ScrollReveal>
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
         <a

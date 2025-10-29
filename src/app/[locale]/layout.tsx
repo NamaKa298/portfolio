@@ -13,14 +13,6 @@ const montserrat = Montserrat({
   display: 'swap',
 });
 
-const roboto = Roboto({
-  variable: '--font-roboto',
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  style: ['normal', 'italic'],
-  display: 'swap',
-});
-
 export const metadata: Metadata = {
   title: 'Marion Saint-Martin Fullstack ingénieure',
   description: 'Portfolio de Marion Saint-Martin',
@@ -47,7 +39,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} className="dark">
-      <body className={`${montserrat.variable} ${roboto.variable} antialiased`}>
+      <body className={`${montserrat.variable}  antialiased`}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
         </NextIntlClientProvider>

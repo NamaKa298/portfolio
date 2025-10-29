@@ -47,104 +47,111 @@ export function ContactForm() {
   }
 
   return (
-    <Card className="w-full max-w-7xl border border-foreground/30">
-      <CardHeader className="text-4xl">
-        <h3 className="text-5xl mb-6 pb-5">{t('title')}</h3>
-        <CardDescription className="text-xl">
-          {t('description')}
-        </CardDescription>
-      </CardHeader>
-      <CardContent>
-        <form id="form" onSubmit={form.handleSubmit(onSubmit)}>
-          <FieldGroup>
-            <div className="flex flex-row gap-4">
-              <Controller
-                name="name"
-                control={form.control}
-                render={({ field, fieldState }) => (
-                  <Field data-invalid={fieldState.invalid}>
-                    <FieldLabel htmlFor="form-name">
-                      {t('nameLabel')}
-                    </FieldLabel>
-                    <Input
-                      {...field}
-                      className="border border-foreground/30  text-foreground !text-lg"
-                      id="form-name"
-                      aria-invalid={fieldState.invalid}
-                      placeholder={t('namePlaceholder')}
-                      autoComplete="off"
-                    />
-                    {fieldState.invalid && (
-                      <FieldError errors={[fieldState.error]} />
+    <div>
+      <h1 className="text-5xl lg:text-6xl xl:text-7xl text-center font-normal px-2 mx:px-0 mb-3 md:mb-4 lg:mb-5 xl:mb-20 max-w-7xl mx-auto">
+        {t('titlehero')}
+      </h1>
+      <div>
+        <Card className="w-full max-w-7xl border border-foreground/30">
+          <CardHeader className="text-4xl">
+            <h3 className="text-5xl mb-6 pb-5">{t('title')}</h3>
+            <CardDescription className="text-xl">
+              {t('description')}
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <form id="form" onSubmit={form.handleSubmit(onSubmit)}>
+              <FieldGroup>
+                <div className="flex flex-row gap-4">
+                  <Controller
+                    name="name"
+                    control={form.control}
+                    render={({ field, fieldState }) => (
+                      <Field data-invalid={fieldState.invalid}>
+                        <FieldLabel htmlFor="form-name">
+                          {t('nameLabel')}
+                        </FieldLabel>
+                        <Input
+                          {...field}
+                          className="border border-foreground/30  text-foreground !text-lg"
+                          id="form-name"
+                          aria-invalid={fieldState.invalid}
+                          placeholder={t('namePlaceholder')}
+                          autoComplete="off"
+                        />
+                        {fieldState.invalid && (
+                          <FieldError errors={[fieldState.error]} />
+                        )}
+                      </Field>
                     )}
-                  </Field>
-                )}
-              />
-              <Controller
-                name="email"
-                control={form.control}
-                render={({ field, fieldState }) => (
-                  <Field data-invalid={fieldState.invalid}>
-                    <FieldLabel htmlFor="form-email">
-                      {t('emailLabel')}
-                    </FieldLabel>
-                    <Input
-                      {...field}
-                      className="border border-foreground/30 !text-lg"
-                      id="form-email"
-                      aria-invalid={fieldState.invalid}
-                      placeholder={t('emailPlaceholder')}
-                      autoComplete="off"
-                    />
-                    {fieldState.invalid && (
-                      <FieldError errors={[fieldState.error]} />
-                    )}
-                  </Field>
-                )}
-              />
-            </div>
-            <Controller
-              name="message"
-              control={form.control}
-              render={({ field, fieldState }) => (
-                <Field data-invalid={fieldState.invalid}>
-                  <FieldLabel htmlFor="form-message">
-                    {t('messageLabel')}
-                  </FieldLabel>
-                  <InputGroupTextarea
-                    {...field}
-                    id="form-message"
-                    placeholder={t('messagePlaceholder')}
-                    rows={6}
-                    className="min-h-24 rounded-md resize-none border border-foreground/30 focus-visible:ring-1 focus-visible:outline-none focus-visible:ring-ring !text-lg"
-                    aria-invalid={fieldState.invalid}
                   />
-                  <InputGroupAddon align="block-end">
-                    <InputGroupText className="tabular-nums">
-                      {field.value.length}/500 characters
-                    </InputGroupText>
-                  </InputGroupAddon>
-                  {fieldState.invalid && (
-                    <FieldError errors={[fieldState.error]} />
+                  <Controller
+                    name="email"
+                    control={form.control}
+                    render={({ field, fieldState }) => (
+                      <Field data-invalid={fieldState.invalid}>
+                        <FieldLabel htmlFor="form-email">
+                          {t('emailLabel')}
+                        </FieldLabel>
+                        <Input
+                          {...field}
+                          className="border border-foreground/30 !text-lg"
+                          id="form-email"
+                          aria-invalid={fieldState.invalid}
+                          placeholder={t('emailPlaceholder')}
+                          autoComplete="off"
+                        />
+                        {fieldState.invalid && (
+                          <FieldError errors={[fieldState.error]} />
+                        )}
+                      </Field>
+                    )}
+                  />
+                </div>
+                <Controller
+                  name="message"
+                  control={form.control}
+                  render={({ field, fieldState }) => (
+                    <Field data-invalid={fieldState.invalid}>
+                      <FieldLabel htmlFor="form-message">
+                        {t('messageLabel')}
+                      </FieldLabel>
+                      <InputGroupTextarea
+                        {...field}
+                        id="form-message"
+                        placeholder={t('messagePlaceholder')}
+                        rows={6}
+                        className="min-h-24 rounded-md resize-none border border-foreground/30 focus-visible:ring-1 focus-visible:outline-none focus-visible:ring-ring !text-lg"
+                        aria-invalid={fieldState.invalid}
+                      />
+                      <InputGroupAddon align="block-end">
+                        <InputGroupText className="tabular-nums">
+                          {field.value.length}/500 characters
+                        </InputGroupText>
+                      </InputGroupAddon>
+                      {fieldState.invalid && (
+                        <FieldError errors={[fieldState.error]} />
+                      )}
+                    </Field>
                   )}
-                </Field>
-              )}
-            />
-          </FieldGroup>
-        </form>
-      </CardContent>
-      <CardFooter>
-        <Field orientation="horizontal" className="justify-center">
-          <Button
-            className="items-center justify-center size-lg sm:h-11 md:px-8 font-lg text-sm sm:text-sm bg-gradient-to-t from-[#A9AAAB] to-[#FAFAFA] rounded-xl px-8 py-5 hover:scale-105"
-            type="submit"
-            form="form"
-          >
-            {t('submit')}
-            <Send />
-          </Button>
-        </Field>
-      </CardFooter>
-    </Card>
+                />
+              </FieldGroup>
+            </form>
+          </CardContent>
+          <CardFooter>
+            <Field orientation="horizontal" className="justify-center">
+              <Button
+                className="items-center justify-center size-lg sm:h-11 md:px-8 font-lg text-sm sm:text-sm bg-gradient-to-t from-[#A9AAAB] to-[#FAFAFA] rounded-xl px-8 py-5 hover:scale-105"
+                type="submit"
+                form="form"
+              >
+                {t('submit')}
+                <Send />
+              </Button>
+            </Field>
+          </CardFooter>
+        </Card>
+      </div>
+    </div>
   );
 }
