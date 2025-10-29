@@ -1,8 +1,10 @@
 import { LanguageSwitcher } from './LanguageSwitcher';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { Button } from './ui/button';
 import { ArrowUpRightIcon } from 'lucide-react';
-import { ChevronsLeftRightEllipsis, User} from 'lucide-react';
+import { ChevronsLeftRightEllipsis, User, Home } from 'lucide-react';
+import Link from 'next/link';
+import { usePathname } from "next/navigation";
 
 export const Navbar = ({
   scrollToSection,
@@ -10,6 +12,8 @@ export const Navbar = ({
   scrollToSection: (id: string) => void;
 }) => {
   const t = useTranslations('header');
+  const locale = useLocale();
+  const pathname = usePathname();
 
   return (
     <header
@@ -18,7 +22,22 @@ export const Navbar = ({
     >
       <nav className="flex justify-between slide-down">
         <ul className="hidden xl:flex xl:w-full gap-6 items-center justify-between ">
-          <li className="duration-300 hover:duration-300">
+          {pathname === `/${locale}/contact` && (
+           <li className="duration-300 hover:duration-300">
+            <a
+              className="group flex gap-3"
+              onClick={() => scrollToSection('about')}
+              href={`/${locale}`}
+            >
+              <div className="text-[#71717A] duration-300 group-hover:text-white cursor:pointer">
+                <Home />
+              </div>
+              <span>{t('home')}</span>
+            </a>
+          </li>
+        )}
+          {pathname === `/${locale}` && (
+            <li className="duration-300 hover:duration-300">
             <a
               className="group flex gap-3"
               onClick={() => scrollToSection('about')}
@@ -30,6 +49,8 @@ export const Navbar = ({
               <span>{t('about')}</span>
             </a>
           </li>
+        )}
+        {pathname === `/${locale}` && (
           <li className="duration-300 hover:duration-300">
             <a
               className="group flex gap-3"
@@ -41,19 +62,21 @@ export const Navbar = ({
               </div>
               <span>{t('works')}</span>
             </a>
-          </li>
+          </li>)}
+          {pathname === `/${locale}` && (
           <li>
             <div className="flex flex-wrap items-center gap-2 md:flex-row w-full sm:flex-1 max-w-[10rem]">
-              <Button
-                variant="default"
-                className="items-center justify-center size-lg sm:h-11 md:px-8 font-lg text-sm sm:text-sm bg-gradient-to-t from-[#A9AAAB] to-[#FAFAFA] hover:scale-105 w-full rounded-xl"
-                onClick={() => scrollToSection('contact')}
-              >
-                {t('contact')}
-                <ArrowUpRightIcon />
-              </Button>
+              <Link href={`/${locale}/contact`} className="w-full">
+                <Button
+                  variant="default"
+                  className="items-center justify-center size-lg sm:h-11 md:px-8 font-lg text-sm sm:text-sm bg-gradient-to-t from-[#A9AAAB] to-[#FAFAFA] hover:scale-105 w-full rounded-xl"
+                >
+                  {t('contact')}
+                  <ArrowUpRightIcon />
+                </Button>
+              </Link>
             </div>
-          </li>
+          </li>)}
           <li>
             <LanguageSwitcher />
           </li>

@@ -1,34 +1,25 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import "./globals.css";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
-import { ArrowUpRightIcon } from "lucide-react";
-import { useTranslations } from "next-intl";
-import { ContactForm } from "@/components/form";
-import Projects from "@/components/projects";
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import { ArrowUpRightIcon } from 'lucide-react';
+import { useTranslations, useLocale } from 'next-intl';
+import { ContactForm } from '@/components/form';
+import Projects from '@/components/projects';
 import { Navbar } from '@/components/navbar';
 import About from '@/components/about';
+import Link from 'next/link';
+import { scrollToSection } from '@/lib/scrollToSection';
 
 export default function HomePage() {
   const t = useTranslations('home');
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      const offset = 80;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - offset;
+  const locale = useLocale();
 
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth',
-      });
-    }
-  };
   return (
     <div className="max-w-screen-xl mx-auto w-full">
       <Navbar scrollToSection={scrollToSection} />
       <main className="flex flex-col gap-[32px]">
-        <header className="max-full mx-auto pt-20 md:pt-28 lg:pt-36 xl:pt-44 overflow-hidden relative text-center pb-56 md:pb-64 lg:pb-0">
+        <header className="h-screen max-full mx-auto pt-20 md:pt-28 lg:pt-36 xl:pt-44 overflow-hidden relative text-center lg:pb-0">
           <section
             id="titleSection"
             className="flex flex-col items-center justify-center"
@@ -46,14 +37,15 @@ export default function HomePage() {
                 id="contactcallToAction"
                 className="flex flex-wrap items-center gap-2 md:flex-row slide-up-from-bottom-left w-full sm:flex-1 max-w-[10rem]"
               >
-                <Button
-                  variant="default"
-                  className="items-center justify-center size-lg sm:h-11 md:px-8 font-lg text-sm sm:text-sm bg-gradient-to-t from-[#A9AAAB] to-[#FAFAFA] hover:scale-105 w-full rounded-xl"
-                  onClick={() => scrollToSection('contact')}
-                >
-                  {t('contact')}
-                  <ArrowUpRightIcon />
-                </Button>
+                <Link href={`/${locale}/contact`} className="w-full">
+                  <Button
+                    variant="default"
+                    className="items-center justify-center size-lg sm:h-11 md:px-8 font-lg text-sm sm:text-sm bg-gradient-to-t from-[#A9AAAB] to-[#FAFAFA] hover:scale-105 w-full rounded-xl"
+                  >
+                    {t('contact')}
+                    <ArrowUpRightIcon />
+                  </Button>
+                </Link>
               </div>
               <div
                 id="projectscallToAction"
@@ -69,18 +61,22 @@ export default function HomePage() {
               </div>
             </div>
           </section>
+          <div
+            className=" z-(-40) bg-[#D9D9D9] w-[500px] h-[300px] rounded-full blur-[300px] relative -bottom-10 left-1/2 -translate-x-1/2 mix-blend-lighten pointer-events-none"
+            style={{ opacity: 1 }}
+          >
+            {''}
+          </div>
         </header>
+
         <section id="projects" className="flex sm:pb-56">
           <Projects />
         </section>
         <section id="about" className="flex sm:pb-56">
           <About />
         </section>
-        <section id="contact" className="flex justify-center pb-10">
-          <ContactForm />
-        </section>
-      </main>
 
+      </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"

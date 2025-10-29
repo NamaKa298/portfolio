@@ -23,7 +23,8 @@
     "cv": "Télécharger mon CV",
     "tools": "Mes outils :"
   },
-  "form": {
+  "contact": {
+    "titlehero": "Envie de me contacter ? Envoie moi un message !",
     "title": "Contact",
     "description": "Envie de créer un site web ? Remplissez ce formulaire.",
     "nameLabel": "Nom (Facultatif)",

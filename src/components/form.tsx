@@ -39,7 +39,7 @@ export function ContactForm() {
     },
   });
 
-  const t = useTranslations('form');
+  const t = useTranslations('contact');
 
   function onSubmit(data: z.infer<typeof formSchema>) {
     console.log(data);
@@ -47,9 +47,9 @@ export function ContactForm() {
   }
 
   return (
-    <Card className="w-full max-w-7xl border border-foreground/70">
+    <Card className="w-full max-w-7xl border border-foreground/30">
       <CardHeader className="text-4xl">
-        <h3>{t('title')}</h3>
+        <h3 className="text-5xl mb-6 pb-5">{t('title')}</h3>
         <CardDescription className="text-xl">
           {t('description')}
         </CardDescription>
@@ -68,7 +68,7 @@ export function ContactForm() {
                     </FieldLabel>
                     <Input
                       {...field}
-                      className="border border-foreground/70  text-foreground !text-lg"
+                      className="border border-foreground/30  text-foreground !text-lg"
                       id="form-name"
                       aria-invalid={fieldState.invalid}
                       placeholder={t('namePlaceholder')}
@@ -90,7 +90,7 @@ export function ContactForm() {
                     </FieldLabel>
                     <Input
                       {...field}
-                      className="border border-foreground/70 !text-lg"
+                      className="border border-foreground/30 !text-lg"
                       id="form-email"
                       aria-invalid={fieldState.invalid}
                       placeholder={t('emailPlaceholder')}
@@ -116,7 +116,7 @@ export function ContactForm() {
                     id="form-message"
                     placeholder={t('messagePlaceholder')}
                     rows={6}
-                    className="min-h-24 rounded-md resize-none border border-foreground/70 focus-visible:ring-1 focus-visible:outline-none focus-visible:ring-ring !text-lg"
+                    className="min-h-24 rounded-md resize-none border border-foreground/30 focus-visible:ring-1 focus-visible:outline-none focus-visible:ring-ring !text-lg"
                     aria-invalid={fieldState.invalid}
                   />
                   <InputGroupAddon align="block-end">

@@ -31,7 +31,7 @@ export default function About() {
             <p>{t('description')}</p>
             <div className="flex justify-center p-20">
               <a
-                className="text-lg p-3 rounded-lg hover:scale-105 flex items-center gap-2 bg-foreground text-background hover:bg-primary/70"
+                className=" p-3  hover:scale-105 flex gap-2 bg-foreground text-background hover:bg-primary/70 items-center justify-center size-lg sm:h-11 md:px-8 font-lg text-sm sm:text-sm bg-gradient-to-t from-[#A9AAAB] to-[#FAFAFA] rounded-xl"
                 href="CV_Marion_Saint_Martin.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
