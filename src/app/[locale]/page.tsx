@@ -70,9 +70,13 @@ export default function HomePage() {
           <section id="projects" className="flex sm:pb-56">
             <Projects />
           </section>
+        </ScrollReveal>
+        <ScrollReveal>
           <section id="about" className="flex sm:pb-56">
             <About />
           </section>
+        </ScrollReveal>
+        <ScrollReveal>
           <section id="contact" className="flex sm:pb-56">
             <ContactForm />
           </section>
