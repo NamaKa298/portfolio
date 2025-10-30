@@ -10,6 +10,7 @@ import {
 
 import { Calligraffitti, Poppins } from 'next/font/google';
 import { Button } from './ui/button';
+import { use } from 'react';
 
 const calligraffitti = Calligraffitti({ subsets: ['latin'], weight: '400' });
 const poppins = Poppins({ subsets: ['latin'], weight: '600' });
@@ -21,6 +22,7 @@ const fontClasses: { [key: string]: string } = {
 
 export default function Projects() {
   const t = useTranslations('projects');
+  const tProjects = useTranslations('projects.projectsData');
 
   return (
     <div className="w-full">
@@ -29,9 +31,11 @@ export default function Projects() {
         <div className="flex flex-col gap-4">
           {projects.map((project) => {
             const fontClass = project.font ? fontClasses[project.font] : '';
+            const description = tProjects(`${project.id}.description`);
+
             return (
               <AccordionItem value={project.id} key={project.id}>
-                <AccordionTrigger className="border-l border-t border-foreground/30 hover:border-foreground">
+                <AccordionTrigger className="border-l border-t border-foreground/30 hover:border-foreground rounded-tl-xl">
                   <div className="cursor-pointer flex flex-row items-center justify-between w-full">
                     <h3
                       className={`text-5xl pl-10 ${fontClass} flex flex-row pr-10`}
@@ -67,13 +71,21 @@ export default function Projects() {
                       <p className="p-4 text-sm text-muted-foreground italic">
                         {project.date}
                       </p>
-                      <p className="p-4 text-justify text-lg">
-                        {project.description}
-                      </p>
+                      <p className="p-4 text-justify text-lg">{description}</p>
                       <div className="flex pt-10 pb-10 justify-center">
-                        <Button className="items-center justify-center size-lg sm:h-11 md:px-8 font-lg text-sm sm:text-sm bg-gradient-to-t from-[#A9AAAB] to-[#FAFAFA] hover:scale-105 rounded-xl p-6">
-                          {t('viewProject')} ↗
-                        </Button>
+                        {project.link ? (
+                          <a
+                            href={project.link}
+                            target="_blank"
+                            rel="noopener noreffer"
+                          >
+                            <Button className="items-center justify-center size-lg sm:h-11 md:px-8 font-lg text-sm sm:text-sm bg-gradient-to-t from-[#A9AAAB] to-[#FAFAFA] hover:scale-105 rounded-xl p-6">
+                              {t('viewProject')} ↗
+                            </Button>
+                          </a>
+                        ) : (
+                          <Button disabled>{t('viewProject')} ↗</Button>
+                        )}
                       </div>
                       <div className="flex gap-3 p-4 flex-wrap">
                         {project.competences.map((tech) => {

@@ -67,17 +67,17 @@ export default function HomePage() {
           </div>
         </header>
         <ScrollReveal>
-          <section id="projects" className="flex sm:pb-56">
+          <section id="projects" className="min-h-screen flex sm:pb-56">
             <Projects />
           </section>
         </ScrollReveal>
         <ScrollReveal>
-          <section id="about" className="flex sm:pb-56">
+          <section id="about" className="h-screen flex sm:pb-56">
             <About />
           </section>
         </ScrollReveal>
         <ScrollReveal>
-          <section id="contact" className="flex sm:pb-56">
+          <section id="contact" className="min-h-screen flex sm:pb-56">
             <ContactForm />
           </section>
         </ScrollReveal>

@@ -4,8 +4,7 @@ export const projects: Project[] = [
   {
     id: 'lightStep',
     title: 'LightStep',
-    description:
-      "LightStep est une boutique en ligne dédiée aux passionnés de sport, offrant une sélection variée d'équipements adaptés à toutes les disciplines. Grâce à une interface intuitive et des filtres avancés, les utilisateurs peuvent facilement trouver des produits fiables et performants, accompagnés d'avis et de recommandations pour un choix éclairé.",
+    descriptionKey: 'lightStep.description',
     image: '/lightstep.webp',
     date: 'juin 2025 - en cours',
     competences: [
@@ -24,11 +23,10 @@ export const projects: Project[] = [
   {
     id: 'nutribouge',
     title: 'NUTRI-BOUGE',
-    description:
-      "Site vitrine pour cabinet de coaching sportif et diététique. Plateforme complète proposant des services de coaching individuel et en groupe, avec système de tarification, formulaire de contact, présentation des services d'éducation thérapeutique et de diététique.",
+    descriptionKey: 'nutribouge.description',
     image: '/nutribouge.webp',
-    date: 'janvier 2025 - avril 2025',
-    competences: ['CSS', 'HTML', 'JavaScript', 'Sass'],
+    date: 'mars 2025 - avril 2025',
+    competences: ['CSS', 'HTML', 'JavaScript', 'Sass', 'Figma'],
     link: 'https://nutribouge.com/',
     font: 'poppins',
   },

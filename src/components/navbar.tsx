@@ -26,6 +26,7 @@ export const Navbar = ({
             <a
               className="group flex gap-3"
               onClick={() => scrollToSection('about')}
+              href="#about"
             >
               <div className="text-[#71717A] duration-300 group-hover:text-white cursor:pointer">
                 <User />
@@ -38,6 +39,7 @@ export const Navbar = ({
             <a
               className="group flex gap-3"
               onClick={() => scrollToSection('projects')}
+              href="#projects"
             >
               <div className="text-[#71717A] duration-300 group-hover:text-white">
                 <ChevronsLeftRightEllipsis />

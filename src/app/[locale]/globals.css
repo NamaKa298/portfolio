@@ -64,6 +64,7 @@ h3 {
   line-height: 1.2;
   margin: 0;
 }
+
 body {
   font-family: var(--font-montserrat), system-ui, sans-serif;
   /*background: linear-gradient(0deg, #1e3a8a 0%, #172554 20%, #000000 90%);*/

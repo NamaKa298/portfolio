@@ -15,7 +15,15 @@
   },
   "projects": {
     "title": "Projects",
-    "viewProject": "View Project"
+    "viewProject": "View Project",
+    "projectsData": {
+      "lightStep": {
+        "description": "LightStep is an online store dedicated to sports enthusiasts, offering a wide selection of equipment suitable for all disciplines. With an intuitive interface and advanced filters, users can easily find reliable and high-performance products, accompanied by reviews and recommendations for informed choices."
+      },
+      "nutribouge": {
+        "description": "Showcase site for a sports coaching and dietetics practice. A comprehensive platform offering individual and group coaching services, with pricing system, contact form, presentation of therapeutic education and dietetics services."
+      }
+    }
   },
   "about": {
     "title": "About",
