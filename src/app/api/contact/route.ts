@@ -13,17 +13,15 @@ export async function POST(request: Request) {
 
     const displayName = name?.trim() || email.split('@')[0];
 
-    // Email 1 : Pour VOUS
     console.log('1️⃣ Envoi email notification...');
     const result1 = await resend.emails.send({
       from: 'Portfolio Contact <onboarding@resend.dev>',
       to: ['marion.saint-martin_pro@protonmail.com'],
       subject: `Message de ${displayName}`,
-      html: '<p>Notification</p>'
+      html: '<p>Notification</p>',
     });
     console.log('✅ Email 1 résultat:', result1);
 
-    // Email 2 : TEST TRÈS SIMPLE
     console.log('2️⃣ Envoi email confirmation...');
     console.log('📧 Email destination:', email);
     
@@ -41,7 +39,7 @@ export async function POST(request: Request) {
 
   } catch (error) {
     console.error('💥 ERREUR CAPTURÉE:', error);
-    // CORRECTION ICI :
+
     return NextResponse.json(
       { error: "Erreur lors de l'envoi" }, 
       { status: 500 }
