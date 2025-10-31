@@ -10,7 +10,6 @@ import {
 
 import { Calligraffitti, Poppins } from 'next/font/google';
 import { Button } from './ui/button';
-import { use } from 'react';
 
 const calligraffitti = Calligraffitti({ subsets: ['latin'], weight: '400' });
 const poppins = Poppins({ subsets: ['latin'], weight: '600' });
