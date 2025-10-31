@@ -11,15 +11,22 @@ export async function POST(request: Request) {
   try {
     const { name, email, message } = await request.json();
 
+    const getDisplayName = () => {
+      if (name?.trim()) return name.trim();
+      return email.split('@')[0];
+    };
+
+    const displayName = getDisplayName();
+
     await resend.emails.send({
       from: 'Portfolio Contact <onboarding@resend.dev>',
       to: ['marion.saint-martin_pro@protonmail.com'],
-      subject: `Nouveau message de ${name}`,
+      subject: `Nouveau message de ${displayName}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px;">
           <h2 style="color: #333;">Nouveau message de contact</h2>
           <div style="background: #f5f5f5; padding: 20px; border-radius: 8px;">
-            <p><strong>👤 Nom :</strong> ${name}</p>
+            <p><strong>👤 Nom :</strong> ${displayName}</p>
             <p><strong>📧 Email :</strong> ${email}</p>
             <p><strong>💬 Message :</strong></p>
             <p style="background: white; padding: 15px; border-radius: 5px; border-left: 4px solid #3B82F6;">
@@ -37,7 +44,7 @@ export async function POST(request: Request) {
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px;">
           <h2 style="color: #333;">Merci pour votre message !</h2>
-          <p>Bonjour <strong>${name}</strong>,</p>
+          <p>Bonjour <strong>${displayName}</strong>,</p>
           <p>Je vous confirme avoir bien reçu votre message et vous remercie de l'intérêt que vous portez à mon travail.</p>
           
           <div style="background: #f8fafc; padding: 15px; border-radius: 8px; margin: 20px 0;">
