@@ -1,14 +1,19 @@
 import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
+import { config } from '@/lib/config';
 
 const resendApiKey = process.env.RESEND_API_KEY;
-if (!resendApiKey) {
-  console.error('RESEND_API_KEY manquante');
-}
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = new Resend(resendApiKey);
 
 export async function POST(request: Request) {
   try {
+    if (!resendApiKey) {
+      console.error('RESEND_API_KEY manquante');
+    }
+
+    if (!config.contactEmail) {
+      throw new Error('CONTACT_EMAIL non configurée');
+    }
     const { name, email, message } = await request.json();
 
     const getDisplayName = () => {
@@ -20,7 +25,7 @@ export async function POST(request: Request) {
 
     await resend.emails.send({
       from: 'Portfolio Contact <onboarding@resend.dev>',
-      to: ['marion.saint-martin_pro@protonmail.com'],
+      to: [config.contactEmail],
       subject: `Nouveau message de ${displayName}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px;">
