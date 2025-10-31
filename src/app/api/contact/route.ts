@@ -9,7 +9,7 @@ export async function POST(request: Request) {
   
   try {
     const { name, email, message } = await request.json();
-    console.log('📨 Données:', { name, email });
+    console.log('📨 Données:', { name, email, message });
 
     const displayName = name?.trim() || email.split('@')[0];
 

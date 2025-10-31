@@ -1,10 +1,8 @@
 import { LanguageSwitcher } from './LanguageSwitcher';
-import { useTranslations, useLocale } from 'next-intl';
+import { useTranslations } from 'next-intl';
 import { Button } from './ui/button';
 import { ArrowUpRightIcon } from 'lucide-react';
-import { ChevronsLeftRightEllipsis, User, Home } from 'lucide-react';
-import Link from 'next/link';
-import { usePathname } from "next/navigation";
+import { ChevronsLeftRightEllipsis, User } from 'lucide-react';
 
 export const Navbar = ({
   scrollToSection,
@@ -12,8 +10,7 @@ export const Navbar = ({
   scrollToSection: (id: string) => void;
 }) => {
   const t = useTranslations('header');
-  const locale = useLocale();
-  const pathname = usePathname();
+
 
   return (
     <header
