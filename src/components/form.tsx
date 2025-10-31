@@ -43,10 +43,30 @@ export function ContactForm() {
 
   const t = useTranslations('contact');
 
-  function onSubmit(data: z.infer<typeof formSchema>) {
-    console.log(data);
-    form.reset();
-  }
+ async function onSubmit(data: z.infer<typeof formSchema>) {
+   console.log('🔄 Données du formulaire:', data);
+
+   try {
+     const response = await fetch('/api/contact', {
+       method: 'POST',
+       headers: {
+         'Content-Type': 'application/json',
+       },
+       body: JSON.stringify(data),
+     });
+
+     const result = await response.json();
+
+     if (response.ok) {
+       console.log('✅ Email envoyé avec succès!');
+       form.reset();
+     } else {
+       console.error('❌ Erreur API:', result.error);
+     }
+   } catch (error) {
+     console.error('💥 Erreur réseau:', error);
+   }
+ }
 
   return (
     <div>
