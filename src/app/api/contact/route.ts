@@ -1,7 +1,11 @@
 import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resendApiKey = process.env.RESEND_API_KEYS;
+if (!resendApiKey) {
+  console.error('RESEND_API_KEYS manquante');
+}
+const resend = new Resend(process.env.RESEND_API_KEYS);
 
 export async function POST(request: Request) {
   try {
