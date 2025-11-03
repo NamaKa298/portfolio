@@ -19,14 +19,16 @@ import {
   SiCss3,
 } from 'react-icons/si';
 import { FaSass } from 'react-icons/fa';
+import { Card } from './ui/card';
+import { ArrowUpRightIcon } from 'lucide-react';
 
 export default function About() {
   const t = useTranslations('about');
   return (
     <div className="w-full">
       <h2 className="text-5xl mb-6 pb-5">{t('title')}</h2>
-      <div className="flex flex-row gap-[100px] text-lg">
-        <div className="w-1/2 text-justify">
+      <Card className="flex flex-row text-lg bg-foreground/10 rounded-xl border-foreground/20">
+        <Card className="w-1/2 text-justify p-10 m-2 rounded-xl border-foreground/20">
           <div className="flex flex-col">
             <p>{t('description')}</p>
             <div className="flex justify-center p-20">
@@ -49,7 +51,9 @@ export default function About() {
                 aria-label="Github Profile"
               >
                 <FaGithub className="h-8 w-8" />
-                <div className="hover:translate-x-1">Github →</div>
+                <div className="hover:translate-x-1 flex flex-row">
+                  Github <ArrowUpRightIcon />
+                </div>
               </a>
               <a
                 className="flex items-center gap-2 hover:underline hover:underline-offset-4 hover:text-primary/70"
@@ -59,7 +63,9 @@ export default function About() {
                 aria-label="LinkedIn Profile"
               >
                 <FaLinkedin className="h-8 w-8" />
-                <div className="hover:translate-x-1">LinkedIn →</div>
+                <div className="hover:translate-x-1 flex flex-row">
+                  LinkedIn <ArrowUpRightIcon />
+                </div>
               </a>
               <a
                 className="flex items-center gap-2 hover:underline hover:underline-offset-4 hover:text-primary/70"
@@ -69,12 +75,14 @@ export default function About() {
                 aria-label="Twitter Profile"
               >
                 <FaXTwitter className="h-8 w-8" />
-                <div className="hover:translate-x-1">Twitter →</div>
+                <div className="hover:translate-x-1 flex flex-row">
+                  Twitter <ArrowUpRightIcon />
+                </div>
               </a>
             </div>
           </div>
-        </div>
-        <div className="w-1/2 text-justify text-2xl">
+        </Card>
+        <Card className="w-1/2 text-justify text-2xl rounded-xl border-foreground/20 m-2 p-10">
           <div className="mb-8">
             <h3>{t('tools')}</h3>
           </div>
@@ -95,8 +103,8 @@ export default function About() {
             <SiFigma className="text-[#f24e1e] h-[50px] w-[50px]" />
             <SiVercel className="h-[50px] w-[50px]" />
           </div>
-        </div>
-      </div>
+        </Card>
+      </Card>
     </div>
   );
 }
