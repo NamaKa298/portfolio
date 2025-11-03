@@ -19,7 +19,7 @@ import {
   SiCss3,
 } from 'react-icons/si';
 import { FaSass } from 'react-icons/fa';
-import { Card, CardContent } from './ui/card';
+import { Card } from './ui/card';
 import { ArrowUpRightIcon } from 'lucide-react';
 
 export default function About() {
