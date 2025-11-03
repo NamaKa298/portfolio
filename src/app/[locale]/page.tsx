@@ -38,7 +38,7 @@ export default function HomePage() {
               >
                 <Button
                   variant="default"
-                  className="items-center justify-center size-lg sm:h-11 md:px-8 font-lg text-sm sm:text-sm bg-gradient-to-t from-[#A9AAAB] to-[#FAFAFA] hover:scale-105 w-full rounded-xl"
+                  className="items-center justify-center size-lg sm:h-11 md:px-8 font-lg text-sm sm:text-sm bg-gradient-to-t from-[#A9AAAB] to-[#FAFAFA] hover:scale-105 w-full"
                   onClick={() => scrollToSection('contact')}
                 >
                   {t('contact')}
@@ -51,7 +51,7 @@ export default function HomePage() {
               >
                 <Button
                   variant="outline"
-                  className="items-center font-lg size-lg sm:h-11 md:px-8 text-sm sm:text-sm hover:scale-105 border-foreground/30 w-full justify-center rounded-xl"
+                  className="items-center font-lg size-lg sm:h-11 md:px-8 text-sm sm:text-sm hover:scale-105 border-foreground/30 w-full justify-center"
                   onClick={() => scrollToSection('projects')}
                 >
                   {t('viewProjects')}
@@ -82,7 +82,7 @@ export default function HomePage() {
           </section>
         </ScrollReveal>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
+      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center border-t py-10">
         <div>
           © 2025 Marion Saint-Martin - Fullstack Ingénieure. Tous droits
           réservés.

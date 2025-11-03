@@ -30,6 +30,7 @@ import {
   InputGroupText,
   InputGroupTextarea,
 } from '@/components/ui/input-group';
+import { ArrowUpRightIcon } from 'lucide-react';
 
 export function ContactForm() {
   const form = useForm<z.infer<typeof formSchema>>({
@@ -73,10 +74,10 @@ export function ContactForm() {
       <h2 className="text-4xl lg:text-6xl xl:text-7xl text-center font-normal px-2 mx:px-0 mb-3 md:mb-4 lg:mb-5 xl:mb-10 max-w-7xl mx-auto">
         {t('titlehero')}
       </h2>
-      <div>
-        <Card className="w-full max-w-7xl border border-foreground/20 bg-foreground/10 flex flex-row rounded-xl">
-          <CardContent className="w-1/2 border border-foreground/20 p-2 m-2 rounded-xl flex flex-col">
-            <CardHeader className="text-4xl flex-grow">
+      <div className="w-full max-w-7xl flex flex-row gap-4">
+        <div className="w-1/2 flex-1">
+          <Card className="flex flex-col h-full">
+            <CardHeader className="text-xl flex-grow">
               <CardTitle className="text-5xl pb-5 font-nohemi">
                 {t('title')}
               </CardTitle>
@@ -89,14 +90,14 @@ export function ContactForm() {
                   <p className="text-lg font-semibold">
                     Disponible pour échanger
                   </p>
-                  <p className="text-lg mb-4">
+                  <p className="text-lg mb-6">
                     Discutons de votre projet lors d'un appel de 15 minutes
                   </p>
                   <a
                     href="https://calendly.com/marion-saint-martin_pro/30min"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex  font-semibold px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl  p-3 gap-2 bg-foreground text-background hover:bg-primary/70 items-center justify-center size-lg sm:h-11 md:px-8 font-lg text-sm sm:text-sm bg-gradient-to-t from-[#A9AAAB] to-[#FAFAFA] "
+                    className="inline-flex p-3 hover:scale-105 gap-2 text-background hover:bg-primary/70 items-center justify-center size-lg sm:h-11 md:px-8 font-lg text-sm sm:text-sm bg-gradient-to-t from-[#A9AAAB] to-[#FAFAFA] rounded-xl"
                   >
                     <svg
                       className="w-5 h-5"
@@ -112,43 +113,55 @@ export function ContactForm() {
                     Prendre un rendez-vous
                   </a>
                 </div>
-                <div className="flex flex-row gap-4 w-full justify-between">
+                <div className="flex flex-row gap-4 justify-between w-full">
                   <a
+                    className="flex items-center gap-2 hover:underline hover:underline-offset-4 hover:text-primary/70"
                     href="https://github.com/NamaKa298"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1"
+                    aria-label="Github Profile"
                   >
-                    <Button className="flex items-center justify-center size-lg sm:h-11 md:px-8 font-lg text-sm sm:text-sm bg-gradient-to-t from-[#A9AAAB] to-[#FAFAFA] hover:scale-105 rounded-xl p-3 w-full">
-                      <FaGithub /> Github
-                    </Button>
+                    <FaGithub className="h-8 w-8" />
+                    <div className="hover:translate-x-1 flex flex-row">
+                      Github <ArrowUpRightIcon />
+                    </div>
                   </a>
                   <a
+                    className="flex items-center gap-2 hover:underline hover:underline-offset-4 hover:text-primary/70"
                     href="https://www.linkedin.com/in/marionsaint-martin/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1"
+                    aria-label="LinkedIn Profile"
                   >
-                    <Button className="flex items-center justify-center size-lg sm:h-11 md:px-8 font-lg text-sm sm:text-sm bg-gradient-to-t from-[#A9AAAB] to-[#FAFAFA] hover:scale-105 rounded-xl p-3 w-full">
-                      <FaLinkedin /> LinkedIn
-                    </Button>
+                    <FaLinkedin className="h-8 w-8" />
+                    <div className="hover:translate-x-1 flex flex-row">
+                      LinkedIn <ArrowUpRightIcon />
+                    </div>
                   </a>
                   <a
+                    className="flex items-center gap-2 hover:underline hover:underline-offset-4 hover:text-primary/70"
                     href="https://x.com/marion_st_m"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1"
+                    aria-label="Twitter Profile"
                   >
-                    <Button className="flex items-center justify-center size-lg sm:h-11 md:px-8 font-lg text-sm sm:text-sm bg-gradient-to-t from-[#A9AAAB] to-[#FAFAFA] hover:scale-105 rounded-xl p-3 w-full">
-                      <FaXTwitter /> Twitter
-                    </Button>
+                    <FaXTwitter className="h-8 w-8" />
+                    <div className="hover:translate-x-1 flex flex-row">
+                      Twitter <ArrowUpRightIcon />
+                    </div>
                   </a>
                 </div>
               </div>
             </CardHeader>
-          </CardContent>
-          <CardContent className="w-1/2 p-2 pt-4">
-            <form id="form" onSubmit={form.handleSubmit(onSubmit)}>
+          </Card>
+        </div>
+        <div className="w-1/2 flex-1">
+          <Card className="placeholder:p-2 h-full">
+            <form
+              className="p-6"
+              id="form"
+              onSubmit={form.handleSubmit(onSubmit)}
+            >
               <FieldGroup>
                 <div className="flex flex-row gap-4">
                   <Controller
@@ -161,7 +174,7 @@ export function ContactForm() {
                         </FieldLabel>
                         <Input
                           {...field}
-                          className="border border-foreground/20  text-foreground !text-lg rounded-xl"
+                          className="border border-foreground/20  text-foreground !text-lg"
                           id="form-name"
                           aria-invalid={fieldState.invalid}
                           placeholder={t('namePlaceholder')}
@@ -183,7 +196,7 @@ export function ContactForm() {
                         </FieldLabel>
                         <Input
                           {...field}
-                          className="border border-foreground/20 !text-lg rounded-xl"
+                          className="border border-foreground/20 !text-lg"
                           id="form-email"
                           aria-invalid={fieldState.invalid}
                           placeholder={t('emailPlaceholder')}
@@ -209,7 +222,7 @@ export function ContactForm() {
                         id="form-message"
                         placeholder={t('messagePlaceholder')}
                         rows={6}
-                        className="h-auto rounded-xl resize-none border border-foreground/20 focus-visible:ring-1 focus-visible:outline-none focus-visible:ring-ring !text-lg"
+                        className="h-auto resize-none border border-foreground/20 focus-visible:ring-1 focus-visible:outline-none focus-visible:ring-ring !text-lg"
                         aria-invalid={fieldState.invalid}
                       />
                       <InputGroupAddon align="block-end">
@@ -228,7 +241,7 @@ export function ContactForm() {
             <CardFooter>
               <Field orientation="horizontal" className="justify-center">
                 <Button
-                  className="items-center justify-center size-lg sm:h-11 md:px-8 font-lg text-sm sm:text-sm bg-gradient-to-t from-[#A9AAAB] to-[#FAFAFA] rounded-xl px-8 py-5 hover:scale-105"
+                  className="items-center justify-center size-lg sm:h-11 md:px-8 font-lg text-sm sm:text-sm bg-gradient-to-t from-[#A9AAAB] to-[#FAFAFA] px-8 py-5 hover:scale-105"
                   type="submit"
                   form="form"
                 >
@@ -237,8 +250,8 @@ export function ContactForm() {
                 </Button>
               </Field>
             </CardFooter>
-          </CardContent>
-        </Card>
+          </Card>
+        </div>
       </div>
     </div>
   );

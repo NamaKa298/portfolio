@@ -2,15 +2,14 @@ import { LanguageSwitcher } from './LanguageSwitcher';
 import { useTranslations } from 'next-intl';
 import { Button } from './ui/button';
 import { ArrowUpRightIcon } from 'lucide-react';
-import { ChevronsLeftRightEllipsis, User } from 'lucide-react';
-
+import { FaDev } from 'react-icons/fa';
+import { IoPersonSharp } from 'react-icons/io5';
 export const Navbar = ({
   scrollToSection,
 }: {
   scrollToSection: (id: string) => void;
 }) => {
   const t = useTranslations('header');
-
 
   return (
     <header
@@ -19,14 +18,14 @@ export const Navbar = ({
     >
       <nav className="flex justify-between slide-down">
         <ul className="hidden xl:flex xl:w-full gap-6 items-center justify-between ">
-            <li className="duration-300 hover:duration-300">
+          <li className="duration-300 hover:duration-300">
             <a
-              className="group flex gap-3"
+              className="group flex gap-3 items-center"
               onClick={() => scrollToSection('about')}
               href="#about"
             >
               <div className="text-[#71717A] duration-300 group-hover:text-white cursor:pointer">
-                <User />
+                <IoPersonSharp />
               </div>
               <span>{t('about')}</span>
             </a>
@@ -34,12 +33,12 @@ export const Navbar = ({
 
           <li className="duration-300 hover:duration-300">
             <a
-              className="group flex gap-3"
+              className="group flex gap-3 items-center"
               onClick={() => scrollToSection('projects')}
               href="#projects"
             >
               <div className="text-[#71717A] duration-300 group-hover:text-white">
-                <ChevronsLeftRightEllipsis />
+                <FaDev />
               </div>
               <span>{t('works')}</span>
             </a>
@@ -47,15 +46,14 @@ export const Navbar = ({
 
           <li>
             <div className="flex flex-wrap items-center gap-2 md:flex-row w-full sm:flex-1 max-w-[10rem]">
-                <Button
-                  variant="default"
-                  className="items-center justify-center size-lg sm:h-11 md:px-8 font-lg text-sm sm:text-sm bg-gradient-to-t from-[#A9AAAB] to-[#FAFAFA] hover:scale-105 w-full rounded-xl"
-                  onClick={() => scrollToSection('contact')}
-
-                >
-                  {t('contact')}
-                  <ArrowUpRightIcon />
-                </Button>
+              <Button
+                variant="default"
+                className="items-center justify-center size-lg sm:h-11 md:px-8 font-lg text-sm sm:text-sm bg-gradient-to-t from-[#A9AAAB] to-[#FAFAFA] hover:scale-105 w-full rounded-xl"
+                onClick={() => scrollToSection('contact')}
+              >
+                {t('contact')}
+                <ArrowUpRightIcon />
+              </Button>
             </div>
           </li>
           <li>
