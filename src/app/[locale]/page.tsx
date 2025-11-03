@@ -39,7 +39,7 @@ export default function HomePage() {
                 <Button
                   variant="default"
                   className="items-center justify-center size-lg sm:h-11 md:px-8 font-lg text-sm sm:text-sm bg-gradient-to-t from-[#A9AAAB] to-[#FAFAFA] hover:scale-105 w-full rounded-xl"
-                  onClick={() => scrollToSection('projects')}
+                  onClick={() => scrollToSection('contact')}
                 >
                   {t('contact')}
                   <ArrowUpRightIcon />
@@ -83,7 +83,10 @@ export default function HomePage() {
         </ScrollReveal>
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <div>© 2025 Marion Saint-Martin - Fullstack Ingénieure. Tous droits réservés.</div>
+        <div>
+          © 2025 Marion Saint-Martin - Fullstack Ingénieure. Tous droits
+          réservés.
+        </div>
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
           href="https://github.com/NamaKa298"

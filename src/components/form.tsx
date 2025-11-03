@@ -7,7 +7,7 @@ import * as z from "zod";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { formSchema } from "@/lib/schemas/contact.schema";
-import { Send } from 'lucide-react';
+import { IoIosSend } from 'react-icons/io';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import {
@@ -43,30 +43,30 @@ export function ContactForm() {
 
   const t = useTranslations('contact');
 
- async function onSubmit(data: z.infer<typeof formSchema>) {
-   console.log('🔄 Données du formulaire:', data);
+  async function onSubmit(data: z.infer<typeof formSchema>) {
+    console.log('🔄 Données du formulaire:', data);
 
-   try {
-     const response = await fetch('/api/contact', {
-       method: 'POST',
-       headers: {
-         'Content-Type': 'application/json',
-       },
-       body: JSON.stringify(data),
-     });
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
 
-     const result = await response.json();
+      const result = await response.json();
 
-     if (response.ok) {
-       console.log('✅ Email envoyé avec succès!');
-       form.reset();
-     } else {
-       console.error('❌ Erreur API:', result.error);
-     }
-   } catch (error) {
-     console.error('💥 Erreur réseau:', error);
-   }
- }
+      if (response.ok) {
+        console.log('✅ Email envoyé avec succès!');
+        form.reset();
+      } else {
+        console.error('❌ Erreur API:', result.error);
+      }
+    } catch (error) {
+      console.error('💥 Erreur réseau:', error);
+    }
+  }
 
   return (
     <div>
@@ -74,8 +74,8 @@ export function ContactForm() {
         {t('titlehero')}
       </h2>
       <div>
-        <Card className="w-full max-w-7xl border border-foreground/30 bg-transparent flex flex-row rounded-xl">
-          <CardContent className="w-1/2 border border-foreground/30 p-2 m-2 rounded-xl flex flex-col">
+        <Card className="w-full max-w-7xl border border-foreground/20 bg-foreground/10 flex flex-row rounded-xl">
+          <CardContent className="w-1/2 border border-foreground/20 p-2 m-2 rounded-xl flex flex-col">
             <CardHeader className="text-4xl flex-grow">
               <CardTitle className="text-5xl pb-5 font-nohemi">
                 {t('title')}
@@ -83,37 +83,67 @@ export function ContactForm() {
               <CardDescription className="text-xl">
                 {t('description')}
               </CardDescription>
-              <div className="flex flex-row justify-between h-full mt-auto gap-5 items-end">
-                <a
-                  href="https://github.com/NamaKa298"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1"
-                >
-                  <Button className="flex items-center justify-center size-lg sm:h-11 md:px-8 font-lg text-sm sm:text-sm bg-gradient-to-t from-[#A9AAAB] to-[#FAFAFA] hover:scale-105 rounded-xl p-3 w-full">
-                    <FaGithub /> Github
-                  </Button>
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/marionsaint-martin/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1"
-                >
-                  <Button className="flex items-center justify-center size-lg sm:h-11 md:px-8 font-lg text-sm sm:text-sm bg-gradient-to-t from-[#A9AAAB] to-[#FAFAFA] hover:scale-105 rounded-xl p-3 w-full">
-                    <FaLinkedin /> LinkedIn
-                  </Button>
-                </a>
-                <a
-                  href="https://x.com/marion_st_m"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1"
-                >
-                  <Button className="flex items-center justify-center size-lg sm:h-11 md:px-8 font-lg text-sm sm:text-sm bg-gradient-to-t from-[#A9AAAB] to-[#FAFAFA] hover:scale-105 rounded-xl p-3 w-full">
-                    <FaXTwitter /> Twitter
-                  </Button>
-                </a>
+
+              <div className="flex flex-col justify-between h-full mt-auto items-end">
+                <div className="flex flex-col text-center mt-9 w-full">
+                  <p className="text-lg font-semibold">
+                    Disponible pour échanger
+                  </p>
+                  <p className="text-lg mb-4">
+                    Discutons de votre projet lors d'un appel de 15 minutes
+                  </p>
+                  <a
+                    href="https://calendly.com/marion-saint-martin_pro/30min"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex  font-semibold px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl  p-3 gap-2 bg-foreground text-background hover:bg-primary/70 items-center justify-center size-lg sm:h-11 md:px-8 font-lg text-sm sm:text-sm bg-gradient-to-t from-[#A9AAAB] to-[#FAFAFA] "
+                  >
+                    <svg
+                      className="w-5 h-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                    Prendre un rendez-vous
+                  </a>
+                </div>
+                <div className="flex flex-row gap-4 w-full justify-between">
+                  <a
+                    href="https://github.com/NamaKa298"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1"
+                  >
+                    <Button className="flex items-center justify-center size-lg sm:h-11 md:px-8 font-lg text-sm sm:text-sm bg-gradient-to-t from-[#A9AAAB] to-[#FAFAFA] hover:scale-105 rounded-xl p-3 w-full">
+                      <FaGithub /> Github
+                    </Button>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/marionsaint-martin/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1"
+                  >
+                    <Button className="flex items-center justify-center size-lg sm:h-11 md:px-8 font-lg text-sm sm:text-sm bg-gradient-to-t from-[#A9AAAB] to-[#FAFAFA] hover:scale-105 rounded-xl p-3 w-full">
+                      <FaLinkedin /> LinkedIn
+                    </Button>
+                  </a>
+                  <a
+                    href="https://x.com/marion_st_m"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1"
+                  >
+                    <Button className="flex items-center justify-center size-lg sm:h-11 md:px-8 font-lg text-sm sm:text-sm bg-gradient-to-t from-[#A9AAAB] to-[#FAFAFA] hover:scale-105 rounded-xl p-3 w-full">
+                      <FaXTwitter /> Twitter
+                    </Button>
+                  </a>
+                </div>
               </div>
             </CardHeader>
           </CardContent>
@@ -131,7 +161,7 @@ export function ContactForm() {
                         </FieldLabel>
                         <Input
                           {...field}
-                          className="border border-foreground/30  text-foreground !text-lg rounded-xl"
+                          className="border border-foreground/20  text-foreground !text-lg rounded-xl"
                           id="form-name"
                           aria-invalid={fieldState.invalid}
                           placeholder={t('namePlaceholder')}
@@ -153,7 +183,7 @@ export function ContactForm() {
                         </FieldLabel>
                         <Input
                           {...field}
-                          className="border border-foreground/30 !text-lg rounded-xl"
+                          className="border border-foreground/20 !text-lg rounded-xl"
                           id="form-email"
                           aria-invalid={fieldState.invalid}
                           placeholder={t('emailPlaceholder')}
@@ -179,7 +209,7 @@ export function ContactForm() {
                         id="form-message"
                         placeholder={t('messagePlaceholder')}
                         rows={6}
-                        className="h-auto rounded-xl resize-none border border-foreground/30 focus-visible:ring-1 focus-visible:outline-none focus-visible:ring-ring !text-lg"
+                        className="h-auto rounded-xl resize-none border border-foreground/20 focus-visible:ring-1 focus-visible:outline-none focus-visible:ring-ring !text-lg"
                         aria-invalid={fieldState.invalid}
                       />
                       <InputGroupAddon align="block-end">
@@ -203,7 +233,7 @@ export function ContactForm() {
                   form="form"
                 >
                   {t('submit')}
-                  <Send />
+                  <IoIosSend />
                 </Button>
               </Field>
             </CardFooter>
