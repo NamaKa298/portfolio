@@ -43,10 +43,18 @@ export default function Projects() {
                         <img src={project.logo} className="w-20 h-20" />
                       )}
                         */}
-                      {project.title}
+                      {project.title.startsWith('/') ? (
+                        <img
+                          src={project.title}
+                          alt="Project Logo"
+                          className="h-[48px] w-auto"
+                        />
+                      ) : (
+                        project.title
+                      )}
                     </h3>
                     <div className="flex pr-10">
-                      {project.competences.map((tech) => {
+                      {project.stack.map((tech) => {
                         const icon = techIcons[tech];
                         return (
                           <div key={tech}>
@@ -65,51 +73,55 @@ export default function Projects() {
                   </div>
                 </AccordionTrigger>
                 <AccordionContent>
-                  <div className="flex flex-row">
-                    <div className="w-2/5">
-                      <p className="p-4 text-sm text-muted-foreground italic">
-                        {project.date}
-                      </p>
-                      <p className="p-4 text-justify text-lg">{description}</p>
-                      <div className="flex pt-10 pb-10 justify-center">
-                        {project.link ? (
-                          <a
-                            href={project.link}
-                            target="_blank"
-                            rel="noopener noreffer"
-                          >
-                            <Button className="items-center justify-center size-lg sm:h-11 md:px-8 font-lg text-sm sm:text-sm bg-gradient-to-t from-[#A9AAAB] to-[#FAFAFA] hover:scale-105 rounded-xl p-6">
-                              {t('viewProject')} ↗
-                            </Button>
-                          </a>
-                        ) : (
-                          <Button disabled>{t('viewProject')} ↗</Button>
-                        )}
+                  <div className="flex flex-col gap-4">
+                    <div className="flex flex-row">
+                      <div className="w-2/5">
+                        <p className="p-4 text-sm text-muted-foreground italic">
+                          {project.date}
+                        </p>
+                        <p className="p-4 text-justify text-lg">
+                          {description}
+                        </p>
+                        <div className="flex pt-10 pb-10 justify-center">
+                          {project.link ? (
+                            <a
+                              href={project.link}
+                              target="_blank"
+                              rel="noopener noreffer"
+                            >
+                              <Button className="items-center justify-center size-lg sm:h-11 md:px-8 font-lg text-sm sm:text-sm bg-gradient-to-t from-[#A9AAAB] to-[#FAFAFA] hover:scale-105 rounded-xl p-6">
+                                {t('viewProject')} ↗
+                              </Button>
+                            </a>
+                          ) : (
+                            <Button disabled>{t('viewProject')} ↗</Button>
+                          )}
+                        </div>
                       </div>
-                      <div className="flex gap-3 p-4 flex-wrap">
-                        {project.competences.map((tech) => {
-                          const icon = techIcons[tech];
-                          return (
-                            <div key={tech} className="flex items-center gap-2">
-                              {icon && (
-                                <div className="text-2xl w-6 h-6" title={tech}>
-                                  {icon}
-                                </div>
-                              )}
-                              <span className="text-sm text-muted-foreground">
-                                {tech}
-                              </span>
-                            </div>
-                          );
-                        })}
+                      <div className="w-3/5 ml-20 mr-4 rounded-lg overflow-hidden">
+                        <img
+                          src={project.image}
+                          alt={project.title}
+                          className="w-full h-auto object-contain rounded-lg"
+                        />
                       </div>
                     </div>
-                    <div className="w-3/5 ml-20 mr-4 rounded-lg overflow-hidden">
-                      <img
-                        src={project.image}
-                        alt={project.title}
-                        className="w-full h-auto object-contain rounded-lg"
-                      />
+                    <div className="flex gap-3 p-4 flex-wrap">
+                      {project.stack_details.map((tech) => {
+                        const icon = techIcons[tech];
+                        return (
+                          <div key={tech} className="flex items-center gap-2">
+                            {icon && (
+                              <div className="text-2xl w-6 h-6" title={tech}>
+                                {icon}
+                              </div>
+                            )}
+                            <span className="text-sm text-muted-foreground">
+                              {tech}
+                            </span>
+                          </div>
+                        );
+                      })}
                     </div>
                   </div>
                 </AccordionContent>

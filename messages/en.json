@@ -22,6 +22,9 @@
       },
       "nutribouge": {
         "description": "Showcase site for a sports coaching and dietetics practice. A comprehensive platform offering individual and group coaching services, with pricing system, contact form, presentation of therapeutic education and dietetics services."
+      },
+      "samanarace": {
+        "description": "SamanaRace is an intuitive and responsive booking application that allows users to easily schedule events. It includes a multilingual contact form to facilitate communication, providing real-time feedback on the status of sent messages. The interface is designed to offer a smooth user experience across all devices."
       }
     }
   },
@@ -41,6 +44,9 @@
     "emailPlaceholder": "Your email",
     "messageLabel": "Message",
     "messagePlaceholder": "Describe your project...",
-    "submit": "Send"
+    "submit": "Send",
+    "callTitle": "Available to chat",
+    "callDescription": "Let's discuss your project during a 15-minute call",
+    "callButton": "Schedule a meeting"
   }
 }

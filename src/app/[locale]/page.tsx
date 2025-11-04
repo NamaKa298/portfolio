@@ -10,6 +10,7 @@ import { Navbar } from '@/components/navbar';
 import About from '@/components/about';
 import { scrollToSection } from '@/lib/scrollToSection';
 import { ScrollReveal } from '@/components/ui/ScrollReveal';
+import { FaXTwitter } from 'react-icons/fa6';
 
 export default function HomePage() {
   const t = useTranslations('home');
@@ -104,6 +105,15 @@ export default function HomePage() {
         >
           <FaLinkedin />
           LinkedIn →
+        </a>
+        <a
+          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+          href="https://x.com/marion_st_m"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaXTwitter />
+          Twitter →
         </a>
       </footer>
     </div>

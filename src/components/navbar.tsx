@@ -30,7 +30,6 @@ export const Navbar = ({
               <span>{t('about')}</span>
             </a>
           </li>
-
           <li className="duration-300 hover:duration-300">
             <a
               className="group flex gap-3 items-center"
@@ -43,7 +42,9 @@ export const Navbar = ({
               <span>{t('works')}</span>
             </a>
           </li>
-
+          <li>
+            <LanguageSwitcher />
+          </li>{' '}
           <li>
             <div className="flex flex-wrap items-center gap-2 md:flex-row w-full sm:flex-1 max-w-[10rem]">
               <Button
@@ -55,9 +56,6 @@ export const Navbar = ({
                 <ArrowUpRightIcon />
               </Button>
             </div>
-          </li>
-          <li>
-            <LanguageSwitcher />
           </li>
         </ul>
       </nav>

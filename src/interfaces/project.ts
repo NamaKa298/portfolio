@@ -4,7 +4,8 @@ export interface Project {
   descriptionKey: string;
   image: string;
   date?: string;
-  competences: string[];
+  stack: string[];
+  stack_details: string[];
   link?: string;
   font?: string;
   logo?: string;

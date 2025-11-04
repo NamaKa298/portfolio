@@ -14,6 +14,8 @@ import {
   SiGit,
   SiFigma,
   SiVercel,
+  SiTrello,
+  SiMongodb,
 } from 'react-icons/si';
 import { FaSass } from 'react-icons/fa';
 // Mapping centralisé de TOUTES les icônes
@@ -39,9 +41,11 @@ export const techIcons: Record<string, React.JSX.Element> = {
   // Databases
   PostgreSQL: <SiPostgresql />,
   Prisma: <SiPrisma />,
+  MongoDB: <SiMongodb />,
 
   // Tools
   Git: <SiGit />,
   Figma: <SiFigma />,
   Vercel: <SiVercel />,
+  Trello: <SiTrello />,
 };

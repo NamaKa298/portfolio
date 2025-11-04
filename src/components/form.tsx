@@ -10,6 +10,7 @@ import { formSchema } from "@/lib/schemas/contact.schema";
 import { IoIosSend } from 'react-icons/io';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
+import { IoCalendar } from 'react-icons/io5';
 import {
   Card,
   CardDescription,
@@ -86,30 +87,16 @@ export function ContactForm() {
 
               <div className="flex flex-col justify-between h-full mt-auto items-end">
                 <div className="flex flex-col text-center mt-9 w-full">
-                  <p className="text-lg font-semibold">
-                    Disponible pour échanger
-                  </p>
-                  <p className="text-lg mb-6">
-                    Discutons de votre projet lors d'un appel de 15 minutes
-                  </p>
+                  <p className="text-lg font-semibold">{t('callTitle')}</p>
+                  <p className="text-lg mb-6">{t('callDescription')} </p>
                   <a
                     href="https://calendly.com/marion-saint-martin_pro/30min"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex p-3 hover:scale-105 gap-2 text-background hover:bg-primary/70 items-center justify-center size-lg sm:h-11 md:px-8 font-lg text-sm sm:text-sm bg-gradient-to-t from-[#A9AAAB] to-[#FAFAFA] rounded-xl"
                   >
-                    <svg
-                      className="w-5 h-5"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    Prendre un rendez-vous
+                    <IoCalendar />
+                    {t('callButton')}
                   </a>
                 </div>
                 <div className="flex flex-row gap-4 justify-between w-full">

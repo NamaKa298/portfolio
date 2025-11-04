@@ -18,12 +18,13 @@
     "viewProject": "Voir le projet",
     "projectsData": {
       "lightStep": {
-        "title": "LightStep",
         "description": "LightStep est une boutique en ligne dédiée aux passionnés de sport, offrant une sélection variée d'équipements adaptés à toutes les disciplines. Grâce à une interface intuitive et des filtres avancés, les utilisateurs peuvent facilement trouver des produits fiables et performants, accompagnés d'avis et de recommandations pour un choix éclairé."
       },
       "nutribouge": {
-        "title": "NutriBouge",
         "description": "Site vitrine pour cabinet de coaching sportif et diététique. Plateforme complète proposant des services de coaching individuel et en groupe, avec système de tarification, formulaire de contact, présentation des services d'éducation thérapeutique et de diététique."
+      },
+      "samanarace": {
+        "description": "SamanaRace est une application de réservation intuitive et responsive qui permet aux utilisateurs de planifier des événements en toute simplicité. Elle inclut un formulaire de contact multilingue pour faciliter la communication, avec des retours en temps réel sur l'état des messages envoyés. L'interface est conçue pour offrir une expérience utilisateur fluide et adaptée à tous les appareils."
       }
     }
   },
@@ -43,6 +44,9 @@
     "emailPlaceholder": "Votre email",
     "messageLabel": "Message",
     "messagePlaceholder": "Décrivez votre projet...",
-    "submit": "Envoyer"
+    "submit": "Envoyer",
+    "callTitle": "Disponible pour échanger",
+    "callDescription": "Discutons de votre projet lors d'un appel de 15 minutes",
+    "callButton": "Prendre un rendez-vous"
   }
 }
