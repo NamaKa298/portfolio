@@ -95,7 +95,7 @@ export function ContactForm() {
                     rel="noopener noreferrer"
                     className="inline-flex p-3 hover:scale-105 gap-2 text-background hover:bg-primary/70 items-center justify-center size-lg sm:h-11 md:px-8 font-lg text-sm sm:text-sm bg-gradient-to-t from-[#A9AAAB] to-[#FAFAFA] rounded-xl"
                   >
-                    <IoCalendar />
+                    <IoCalendar className="h-6 w-6" />
                     {t('callButton')}
                   </a>
                 </div>
@@ -108,7 +108,7 @@ export function ContactForm() {
                     aria-label="Github Profile"
                   >
                     <FaGithub className="h-8 w-8" />
-                    <div className="hover:translate-x-1 flex flex-row">
+                    <div className="flex flex-row">
                       Github <ArrowUpRightIcon />
                     </div>
                   </a>
@@ -120,7 +120,7 @@ export function ContactForm() {
                     aria-label="LinkedIn Profile"
                   >
                     <FaLinkedin className="h-8 w-8" />
-                    <div className="hover:translate-x-1 flex flex-row">
+                    <div className="flex flex-row">
                       LinkedIn <ArrowUpRightIcon />
                     </div>
                   </a>
@@ -132,7 +132,7 @@ export function ContactForm() {
                     aria-label="Twitter Profile"
                   >
                     <FaXTwitter className="h-8 w-8" />
-                    <div className="hover:translate-x-1 flex flex-row">
+                    <div className="flex flex-row">
                       Twitter <ArrowUpRightIcon />
                     </div>
                   </a>
@@ -232,7 +232,7 @@ export function ContactForm() {
                   form="form"
                 >
                   {t('submit')}
-                  <IoIosSend />
+                  <IoIosSend className="h-6 w-6" />
                 </Button>
               </Field>
             </CardFooter>

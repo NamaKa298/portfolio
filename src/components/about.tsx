@@ -1,6 +1,5 @@
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { useTranslations } from 'next-intl';
-import { IoMdDownload } from 'react-icons/io';
 import { FaXTwitter } from 'react-icons/fa6';
 import {
   SiNextdotjs,
@@ -38,9 +37,8 @@ export default function About() {
                   href="CV_Marion_Saint_Martin.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  download
                 >
-                  {t('cv')} <IoMdDownload />
+                  {t('cv')}
                 </a>
               </div>
               <div className="flex flex-row justify-between">
@@ -52,7 +50,7 @@ export default function About() {
                   aria-label="Github Profile"
                 >
                   <FaGithub className="h-8 w-8" />
-                  <div className="hover:translate-x-1 flex flex-row">
+                  <div className=" flex flex-row">
                     Github <ArrowUpRightIcon />
                   </div>
                 </a>
@@ -64,7 +62,7 @@ export default function About() {
                   aria-label="LinkedIn Profile"
                 >
                   <FaLinkedin className="h-8 w-8" />
-                  <div className="hover:translate-x-1 flex flex-row">
+                  <div className=" flex flex-row">
                     LinkedIn <ArrowUpRightIcon />
                   </div>
                 </a>
@@ -76,7 +74,7 @@ export default function About() {
                   aria-label="Twitter Profile"
                 >
                   <FaXTwitter className="h-8 w-8" />
-                  <div className="hover:translate-x-1 flex flex-row">
+                  <div className=" flex flex-row">
                     Twitter <ArrowUpRightIcon />
                   </div>
                 </a>

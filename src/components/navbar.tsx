@@ -2,7 +2,7 @@ import { LanguageSwitcher } from './LanguageSwitcher';
 import { useTranslations } from 'next-intl';
 import { Button } from './ui/button';
 import { ArrowUpRightIcon } from 'lucide-react';
-import { FaDev } from 'react-icons/fa';
+import { MdWork } from 'react-icons/md';
 import { IoPersonSharp } from 'react-icons/io5';
 export const Navbar = ({
   scrollToSection,
@@ -13,38 +13,40 @@ export const Navbar = ({
 
   return (
     <header
-      className="px-5 sm:px-12 md:px-24 lg:px-32 xl:px-48 font-onest container mx-auto py-6"
+      className="sm:px-12 md:px-24 lg:px-32 xl:px-10 font-onest container mx-auto py-6"
       style={{ opacity: 1, transform: 'none' }}
     >
       <nav className="flex justify-between slide-down">
         <ul className="hidden xl:flex xl:w-full gap-6 items-center justify-between ">
-          <li className="duration-300 hover:duration-300">
-            <a
-              className="group flex gap-3 items-center"
-              onClick={() => scrollToSection('about')}
-              href="#about"
-            >
-              <div className="text-[#71717A] duration-300 group-hover:text-white cursor:pointer">
-                <IoPersonSharp />
-              </div>
-              <span>{t('about')}</span>
-            </a>
-          </li>
-          <li className="duration-300 hover:duration-300">
-            <a
-              className="group flex gap-3 items-center"
-              onClick={() => scrollToSection('projects')}
-              href="#projects"
-            >
-              <div className="text-[#71717A] duration-300 group-hover:text-white">
-                <FaDev />
-              </div>
-              <span>{t('works')}</span>
-            </a>
-          </li>
           <li>
             <LanguageSwitcher />
           </li>{' '}
+          <div className="flex gap-6">
+            <li className="duration-300 hover:duration-300">
+              <a
+                className="group flex gap-3 items-center"
+                onClick={() => scrollToSection('about')}
+                href="#about"
+              >
+                <div className="text-[#71717A] duration-300 group-hover:text-white cursor:pointer">
+                  <IoPersonSharp className="h-6 w-6" />
+                </div>
+                <span>{t('about')}</span>
+              </a>
+            </li>
+            <li className="duration-300 hover:duration-300">
+              <a
+                className="group flex gap-3 items-center"
+                onClick={() => scrollToSection('projects')}
+                href="#projects"
+              >
+                <div className="text-[#71717A] duration-300 group-hover:text-white">
+                  <MdWork className="h-6 w-6" />
+                </div>
+                <span>{t('works')}</span>
+              </a>
+            </li>
+          </div>
           <li>
             <div className="flex flex-wrap items-center gap-2 md:flex-row w-full sm:flex-1 max-w-[10rem]">
               <Button
