@@ -253,19 +253,19 @@ body {
 }
 
 .slide-up {
-  animation: slide-up 0.5s ease-in-out forwards;
+  animation: slide-up 0.3s ease-in-out forwards;
 }
 
 .slide-down {
-  animation: slide-down 0.5s ease-in-out forwards;
+  animation: slide-down 0.3s ease-in-out forwards;
 }
 
 .slide-up-from-bottom-left {
-  animation: slide-up-from-bottom-left 0.5s ease-in-out forwards;
+  animation: slide-up-from-bottom-left 0.3s ease-in-out forwards;
 }
 
 .slide-up-from-bottom-right {
-  animation: slide-up-from-bottom-right 0.5s ease-in-out forwards;
+  animation: slide-up-from-bottom-right 0.3s ease-in-out forwards;
 }
 
 .aurora-element {
@@ -292,13 +292,13 @@ body {
 
 #callToAction #contactcallToAction{
     animation: slide-up-from-bottom-left 0.8s ease-in-out forwards;
-  animation-delay: 0.4s;
+  animation-delay: 0.3s;
   opacity: 0;
 }
 
 #callToAction #projectscallToAction{
     animation: slide-up-from-bottom-right 0.8s ease-in-out forwards;
-  animation-delay: 0.4s;
+  animation-delay: 0.3s;
   opacity: 0;
 }
 
