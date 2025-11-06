@@ -87,9 +87,9 @@ export default function Projects() {
                             <a
                               href={project.link}
                               target="_blank"
-                              rel="noopener noreffer"
+                              rel="noopener noreferrer"
                             >
-                              <Button className="items-center justify-center size-lg sm:h-11 md:px-8 font-lg text-sm sm:text-sm bg-gradient-to-t from-[#A9AAAB] to-[#FAFAFA] hover:scale-105 rounded-xl p-6">
+                              <Button className="items-center font-light justify-center size-lg sm:h-11 md:px-8 font-lg text-sm sm:text-sm bg-gradient-to-t from-[#A9AAAB] to-[#FAFAFA] hover:scale-105 p-6 transition-transform duration-300 custom-drop-shadow ButtonShadow">
                                 {t('viewProject')} ↗
                               </Button>
                             </a>

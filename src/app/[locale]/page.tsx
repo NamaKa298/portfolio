@@ -39,7 +39,7 @@ export default function HomePage() {
               >
                 <Button
                   variant="default"
-                  className="items-center justify-center size-lg sm:h-11 md:px-8 font-lg text-sm sm:text-sm bg-gradient-to-t from-[#A9AAAB] to-[#FAFAFA] hover:scale-105 w-full"
+                  className="flex font-light items-center justify-center size-lg sm:h-11 md:px-8 font-lg text-sm sm:text-sm bg-gradient-to-t from-[#A9AAAB] to-[#FAFAFA] hover:scale-105 w-full transition-transform duration-300 custom-drop-shadow ButtonShadow"
                   onClick={() => scrollToSection('contact')}
                 >
                   {t('contact')}
@@ -52,7 +52,7 @@ export default function HomePage() {
               >
                 <Button
                   variant="outline"
-                  className="items-center font-lg size-lg sm:h-11 md:px-8 text-sm sm:text-sm hover:scale-105 border-foreground/30 w-full justify-center"
+                  className="flex font-light items-center font-lg size-lg sm:h-11 md:px-8 text-sm sm:text-sm hover:scale-105 border-foreground/30 w-full justify-center transition-transform duration-300 custom-drop-shadow ButtonShadow"
                   onClick={() => scrollToSection('projects')}
                 >
                   {t('viewProjects')}

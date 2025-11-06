@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --font-montserrat: var(--font-montserrat);
+  --font-onest: var(--font-onest);
   --font-roboto: var(--font-roboto);
 }
 
@@ -27,8 +27,8 @@
   font-family: var(--font-roboto), system-ui, sans-serif;
 }
 
-.font-montserrat {
-  font-family: var(--font-montserrat), system-ui, sans-serif;
+.font-onest {
+  font-family: var(--font-onest), system-ui, sans-serif;
 }
 
 .titles-container {
@@ -66,7 +66,7 @@ h3 {
 }
 
 body {
-  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-family: var(--font-onest), system-ui, sans-serif;
   /*background: linear-gradient(0deg, #1e3a8a 0%, #172554 20%, #000000 90%);*/
   background: black;
   min-height: 100vh;
@@ -185,6 +185,7 @@ body {
   100% {
     transform: translateY(0);
     opacity: 1;
+    filter: blur(0);
   }
 }
 
@@ -201,6 +202,7 @@ body {
   100% {
     transform: translateY(0);
     opacity: 1;
+    filter: blur(0);
   }
 }
 
@@ -253,19 +255,19 @@ body {
 }
 
 .slide-up {
-  animation: slide-up 0.3s ease-in-out forwards;
+  animation: slide-up 0.5s ease-in-out forwards;
 }
 
 .slide-down {
-  animation: slide-down 0.3s ease-in-out forwards;
+  animation: slide-down 0.5s ease-in-out forwards;
 }
 
 .slide-up-from-bottom-left {
-  animation: slide-up-from-bottom-left 0.3s ease-in-out forwards;
+  animation: slide-up-from-bottom-left 0.5s ease-in-out forwards;
 }
 
 .slide-up-from-bottom-right {
-  animation: slide-up-from-bottom-right 0.3s ease-in-out forwards;
+  animation: slide-up-from-bottom-right 0.5s ease-in-out forwards;
 }
 
 .aurora-element {
@@ -284,22 +286,43 @@ body {
   mix-blend-mode: lighten;
 }
 
+#titleSection h1{
+  animation: slide-up 0.6s ease-out forwards;
+  animation-delay: 0.1s;
+  opacity: 0;
+}
 #titleSection p{
-  animation: slide-up 0.8s ease-in-out forwards;
-  animation-delay: 0.2s;
+  animation: slide-up 0.6s ease-in-out forwards;
+  animation-delay: 0.3s;
   opacity: 0;
 }
 
 #callToAction #contactcallToAction{
-    animation: slide-up-from-bottom-left 0.8s ease-in-out forwards;
-  animation-delay: 0.3s;
+    animation: slide-up-from-bottom-left 0.5s ease-out forwards;
+  animation-delay: 0.5s;
   opacity: 0;
 }
 
 #callToAction #projectscallToAction{
-    animation: slide-up-from-bottom-right 0.8s ease-in-out forwards;
-  animation-delay: 0.3s;
+    animation: slide-up-from-bottom-right 0.5s ease-out forwards;
+  animation-delay: 0.5s;
   opacity: 0;
+}
+
+.custom-drop-shadow {
+  box-shadow: 0 78px 22px 0 transparent, 
+              0 50px 20px 0 rgba(0,0,0,.01), 
+              0 28px 17px 0 rgba(0,0,0,.05), 
+              0 13px 13px 0 rgba(0,0,0,.09), 
+              0 3px 7px 0 rgba(0,0,0,.1);
+}
+
+.ButtonShadow {
+  backdrop-filter: blur(6px);
+}
+
+.hover\\:scale-105 {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @layer base {

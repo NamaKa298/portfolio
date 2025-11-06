@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import { Montserrat } from 'next/font/google';
-import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
-import { routing } from "@/i18n/routing";
+import { Onest } from 'next/font/google';
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages } from 'next-intl/server';
+import { routing } from '@/i18n/routing';
 import { notFound } from 'next/navigation';
 import './globals.css';
 
-const montserrat = Montserrat({
-  variable: '--font-montserrat',
+const onest = Onest({
+  variable: '--font-onest',
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
   display: 'swap',
 });
 
@@ -39,7 +39,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} className="dark">
-      <body className={`${montserrat.variable}  antialiased`}>
+      <body className={`${onest.variable}  antialiased`}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
         </NextIntlClientProvider>

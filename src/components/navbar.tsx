@@ -51,7 +51,7 @@ export const Navbar = ({
             <div className="flex flex-wrap items-center gap-2 md:flex-row w-full sm:flex-1 max-w-[10rem]">
               <Button
                 variant="default"
-                className="items-center justify-center size-lg sm:h-11 md:px-8 font-lg text-sm sm:text-sm bg-gradient-to-t from-[#A9AAAB] to-[#FAFAFA] hover:scale-105 w-full rounded-xl"
+                className="flex font-light items-center justify-center size-lg sm:h-11 md:px-8 font-lg text-sm sm:text-sm bg-gradient-to-t from-[#A9AAAB] to-[#FAFAFA] hover:scale-105 w-full transition-transform duration-300 custom-drop-shadow ButtonShadow"
                 onClick={() => scrollToSection('contact')}
               >
                 {t('contact')}

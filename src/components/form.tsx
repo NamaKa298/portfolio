@@ -7,10 +7,10 @@ import * as z from "zod";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { formSchema } from "@/lib/schemas/contact.schema";
-import { IoIosSend } from 'react-icons/io';
+import { Send } from 'lucide-react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
-import { IoCalendar } from 'react-icons/io5';
+import { Calendar } from 'lucide-react';
 import {
   Card,
   CardDescription,
@@ -89,15 +89,19 @@ export function ContactForm() {
                 <div className="flex flex-col text-center mt-9 w-full">
                   <p className="text-lg font-semibold">{t('callTitle')}</p>
                   <p className="text-lg mb-6">{t('callDescription')} </p>
-                  <a
-                    href="https://calendly.com/marion-saint-martin_pro/30min"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex p-3 hover:scale-105 gap-2 text-background hover:bg-primary/70 items-center justify-center size-lg sm:h-11 md:px-8 font-lg text-sm sm:text-sm bg-gradient-to-t from-[#A9AAAB] to-[#FAFAFA] rounded-xl"
+                  <Button
+                    variant="default"
+                    className="flex font-light items-center justify-center size-lg sm:h-11 md:px-8 font-lg text-sm sm:text-sm bg-gradient-to-t from-[#A9AAAB] to-[#FAFAFA] px-8 py-5 hover:scale-105 transition-transform duration-300 custom-drop-shadow ButtonShadow"
+                    onClick={() =>
+                      window.open(
+                        'https://calendly.com/marion-saint-martin_pro/30min',
+                        '_blank'
+                      )
+                    }
                   >
-                    <IoCalendar className="h-6 w-6" />
+                    <Calendar className="!h-6 !w-6" />
                     {t('callButton')}
-                  </a>
+                  </Button>
                 </div>
                 <div className="flex flex-row gap-4 justify-between w-full">
                   <a
@@ -227,12 +231,12 @@ export function ContactForm() {
             <CardFooter>
               <Field orientation="horizontal" className="justify-center">
                 <Button
-                  className="items-center justify-center size-lg sm:h-11 md:px-8 font-lg text-sm sm:text-sm bg-gradient-to-t from-[#A9AAAB] to-[#FAFAFA] px-8 py-5 hover:scale-105"
+                  className="flex font-light items-center justify-center size-lg sm:h-11 md:px-8 font-lg text-sm sm:text-sm bg-gradient-to-t from-[#A9AAAB] to-[#FAFAFA] px-8 py-5 hover:scale-105 transition-transform duration-300 custom-drop-shadow ButtonShadow"
                   type="submit"
                   form="form"
                 >
                   {t('submit')}
-                  <IoIosSend className="h-6 w-6" />
+                  <Send className="!h-6 !w-6" />
                 </Button>
               </Field>
             </CardFooter>
