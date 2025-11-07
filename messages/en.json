@@ -11,7 +11,8 @@
     "contact": "Contact me",
     "viewProjects": "View my projects",
     "competencies": "Competencies",
-    "about": "About"
+    "about": "About",
+    "footer": "© 2025 Marion Saint-Martin - Fullstack Developer. All rights reserved."
   },
   "projects": {
     "title": "Projects",

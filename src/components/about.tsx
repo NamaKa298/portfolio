@@ -25,13 +25,6 @@ import { Button } from './ui/button';
 export default function About() {
   const t = useTranslations('about');
 
-  const handleOpenCV = () => {
-    const newWindow = window.open('/CV_Marion_Saint_Martin.pdf', '_blank');
-    if (newWindow) {
-      newWindow.opener = null; // Sécurité supplémentaire
-    }
-  };
-
   return (
     <div className="w-full">
       <h2 className="text-5xl mb-6 pb-5">{t('title')}</h2>
@@ -41,12 +34,11 @@ export default function About() {
             <div className="flex flex-col p-10 ">
               <p>{t('description')}</p>
               <div className="flex justify-center p-20">
-                <Button
-                  className=" p-3 hover:scale-105 flex gap-2 bg-foreground text-background hover:bg-primary/70 items-center justify-center size-lg sm:h-11 md:px-8 font-lg text-sm sm:text-sm bg-gradient-to-t from-[#A9AAAB] to-[#FAFAFA] rounded-xl transition-transform duration-300 custom-drop-shadow ButtonShadow"
-                  onClick={handleOpenCV}
-                >
-                  {t('cv')}
-                </Button>
+                <a href="/CV_Marion_Saint_Martin.pdf" target="_blank" rel="noopener noreferrer">
+                  <Button className="p-3 font-light hover:scale-105 flex gap-2 bg-foreground text-background hover:bg-primary/70 items-center justify-center size-lg sm:h-11 md:px-8 font-lg text-sm sm:text-sm bg-gradient-to-t from-[#A9AAAB] to-[#FAFAFA] rounded-xl transition-transform duration-300 custom-drop-shadow ButtonShadow">
+                    {t('cv')}
+                  </Button>
+                </a>
               </div>
               <div className="flex flex-row justify-between">
                 <a
