@@ -47,6 +47,7 @@ export default function Projects() {
                         <img
                           src={project.title}
                           alt="Project Logo"
+                          loading="lazy"
                           className="h-[48px] w-auto"
                         />
                       ) : (
@@ -103,6 +104,7 @@ export default function Projects() {
                           src={project.image}
                           alt={project.title}
                           className="w-full h-auto object-contain rounded-lg"
+                          loading="lazy"
                         />
                       </div>
                     </div>

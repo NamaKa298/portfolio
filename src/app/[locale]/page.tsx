@@ -61,7 +61,7 @@ export default function HomePage() {
             </div>
           </section>
           <div
-            className=" z-[-10] bg-[#D9D9D9] w-[600px] h-[300px] rounded-full relative -bottom-0 left-1/2 -translate-x-1/2 mix-blend-lighten pointer-events-none opacity-0 blur-0 animate-glow-appear"
+            className=" z-[-10] bg-[#D9D9D9] w-[600px] h-[300px] rounded-full absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 mix-blend-lighten pointer-events-none opacity-0 blur-0 animate-glow-appear"
             style={{ opacity: 1 }}
           >
             {''}
@@ -84,9 +84,7 @@ export default function HomePage() {
         </ScrollReveal>
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center border-t py-10">
-        <div>
-          {t('footer')}
-        </div>
+        <div>{t('footer')}</div>
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
           href="https://github.com/NamaKa298"
