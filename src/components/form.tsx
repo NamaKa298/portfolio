@@ -105,7 +105,7 @@ export function ContactForm() {
                 </div>
                 <div className="flex flex-row gap-4 justify-between w-full">
                   <a
-                    className="flex items-center gap-2 hover:underline hover:underline-offset-4 hover:text-primary/70"
+                    className="flex items-center gap-2 hover:underline hover:underline-offset-4 hover:text-primary/50"
                     href="https://github.com/NamaKa298"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -117,7 +117,7 @@ export function ContactForm() {
                     </div>
                   </a>
                   <a
-                    className="flex items-center gap-2 hover:underline hover:underline-offset-4 hover:text-primary/70"
+                    className="flex items-center gap-2 hover:underline hover:underline-offset-4 hover:text-primary/50"
                     href="https://www.linkedin.com/in/marionsaint-martin/"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -129,7 +129,7 @@ export function ContactForm() {
                     </div>
                   </a>
                   <a
-                    className="flex items-center gap-2 hover:underline hover:underline-offset-4 hover:text-primary/70"
+                    className="flex items-center gap-2 hover:underline hover:underline-offset-4 hover:text-primary/50"
                     href="https://x.com/marion_st_m"
                     target="_blank"
                     rel="noopener noreferrer"

@@ -21,6 +21,7 @@ import { FaSass } from 'react-icons/fa';
 import { Card } from './ui/card';
 import { ArrowUpRightIcon } from 'lucide-react';
 import { Button } from './ui/button';
+import { IoDocumentTextOutline } from 'react-icons/io5';
 
 export default function About() {
   const t = useTranslations('about');
@@ -34,15 +35,20 @@ export default function About() {
             <div className="flex flex-col p-10 ">
               <p>{t('description')}</p>
               <div className="flex justify-center p-20">
-                <a href="/CV_Marion_Saint_Martin.pdf" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="/CV_Marion_Saint_Martin.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Button className="p-3 font-light hover:scale-105 flex gap-2 bg-foreground text-background hover:bg-primary/70 items-center justify-center size-lg sm:h-11 md:px-8 font-lg text-sm sm:text-sm bg-gradient-to-t from-[#A9AAAB] to-[#FAFAFA] rounded-xl transition-transform duration-300 custom-drop-shadow ButtonShadow">
+                    <IoDocumentTextOutline className="!h-6 !w-6" />
                     {t('cv')}
                   </Button>
                 </a>
               </div>
-              <div className="flex flex-row justify-between">
+              <div className="flex flex-row justify-between w-full">
                 <a
-                  className="flex items-center gap-2 hover:underline hover:underline-offset-4 hover:text-primary/70"
+                  className="flex items-center gap-2 hover:underline hover:underline-offset-4 hover:text-primary/50"
                   href="https://github.com/NamaKa298"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -54,7 +60,7 @@ export default function About() {
                   </div>
                 </a>
                 <a
-                  className="flex items-center gap-2 hover:underline hover:underline-offset-4 hover:text-primary/70"
+                  className="flex items-center gap-2 hover:underline hover:underline-offset-4 hover:text-primary/50"
                   href="https://www.linkedin.com/in/marionsaint-martin/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -66,7 +72,7 @@ export default function About() {
                   </div>
                 </a>
                 <a
-                  className="flex items-center gap-2 hover:underline hover:underline-offset-4 hover:text-primary/70"
+                  className="flex items-center gap-2 hover:underline hover:underline-offset-4 hover:text-primary/50"
                   href="https://x.com/marion_st_m"
                   target="_blank"
                   rel="noopener noreferrer"

@@ -61,8 +61,8 @@ export default function HomePage() {
             </div>
           </section>
           <div
-            className=" z-[-10] bg-[#D9D9D9] w-[600px] h-[300px] rounded-full absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 mix-blend-lighten pointer-events-none opacity-0 blur-0 animate-glow-appear"
-            style={{ opacity: 1 }}
+            className=" z-[-10] bg-[#D9D9D9] w-full h-[1000px] rounded-full absolute bottom-[-350px] left-1/2 -translate-x-1/2 translate-y-1/2 mix-blend-lighten pointer-events-none opacity-0 blur-[200px] animate-glow-appear"
+            style={{ opacity: 0.3 }}
           >
             {''}
           </div>
@@ -86,7 +86,7 @@ export default function HomePage() {
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center border-t py-10">
         <div>{t('footer')}</div>
         <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+          className="flex items-center gap-2 hover:underline hover:underline-offset-4 hover:text-primary/50"
           href="https://github.com/NamaKa298"
           target="_blank"
           rel="noopener noreferrer"
@@ -95,7 +95,7 @@ export default function HomePage() {
           Github →
         </a>
         <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+          className="flex items-center gap-2 hover:underline hover:underline-offset-4 hover:text-primary/50"
           href="https://www.linkedin.com/in/marionsaint-martin/"
           target="_blank"
           rel="noopener noreferrer"
@@ -104,7 +104,7 @@ export default function HomePage() {
           LinkedIn →
         </a>
         <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+          className="flex items-center gap-2 hover:underline hover:underline-offset-4 hover:text-primary/50"
           href="https://x.com/marion_st_m"
           target="_blank"
           rel="noopener noreferrer"
