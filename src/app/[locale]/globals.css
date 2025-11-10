@@ -73,49 +73,6 @@ body {
   color: hsl(var(--foreground));
 }
 
-@media (min-width: 1280px) {
-  .xl\:text-base {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-}
-
-.fixed {
-  position: fixed;
-}
-
-.text-\[\#A9AAAB\] {
-  --tw-text-opacity: 1;
-  color: rgb(169 170 171/var(--tw-text-opacity,1));
-}
-
-.text-sm {
-  font-size: .875rem;
-  line-height: 1.25rem;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.px-2 {
-  padding-left: .5rem;
-  padding-right: .5rem;
-}
-
-.max-w-2xl {
-  max-width: 42rem;
-}
-
-.mb-6 {
-  margin-bottom: 1.5rem;
-}
-
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
-}
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -268,6 +225,21 @@ body {
 
 .slide-up-from-bottom-right {
   animation: slide-up-from-bottom-right 0.5s ease-in-out forwards;
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.4s ease-out forwards;
 }
 
 .aurora-element {

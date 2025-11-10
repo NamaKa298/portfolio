@@ -22,7 +22,7 @@ export default function HomePage() {
         <header className="h-screen max-full mx-auto pt-20 md:pt-28 lg:pt-36 xl:pt-44 overflow-hidden relative text-center lg:pb-0">
           <section
             id="titleSection"
-            className="flex flex-col items-center justify-center"
+            className="flex flex-col items-center justify-center z-0"
           >
             <h1 className="slide-up text-5xl lg:text-6xl xl:text-7xl text-center font-normal px-2 mx:px-0 mb-3 md:mb-4 lg:mb-5 xl:mb-6 max-w-7xl mx-auto">
               {t('title')}
