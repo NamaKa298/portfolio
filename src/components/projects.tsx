@@ -114,7 +114,10 @@ export default function Projects() {
                         return (
                           <div key={tech} className="flex items-center gap-2">
                             {icon && (
-                              <div className="text-2xl w-6 h-6" title={tech}>
+                              <div
+                                className="text-2xl w-6 h-6 opacity-50"
+                                title={tech}
+                              >
                                 {icon}
                               </div>
                             )}
