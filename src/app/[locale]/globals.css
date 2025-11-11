@@ -312,6 +312,40 @@ body {
   animation: glowAppear 2s ease-out forwards;
 }
 
+.menu__burger {
+  display: block;
+  cursor: pointer;
+  background: none;
+  border: none;
+  width: 35px;
+  height: 30px;
+}
+
+.menu__burger .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: #FFFFFF;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu__burger.active .bar {
+  background-color: white;
+}
+
+.menu__burger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu__burger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu__burger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
 @layer base {
   *,
   ::before,

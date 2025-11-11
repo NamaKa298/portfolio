@@ -74,8 +74,8 @@ export function ContactForm() {
       <h2 className="text-4xl lg:text-6xl xl:text-7xl text-center font-normal px-2 mx:px-0 mb-3 md:mb-4 lg:mb-5 xl:mb-10 max-w-7xl mx-auto">
         {t('titlehero')}
       </h2>
-      <div className="w-full max-w-7xl flex flex-row gap-4">
-        <div className="w-1/2 flex-1">
+      <div className="w-full max-w-7xl flex flex-col lg:flex-row gap-4">
+        <div className="lg:w-1/2 lg:flex-1">
           <Card className="flex flex-col h-full">
             <CardHeader className="text-xl flex-grow">
               <CardTitle className="text-5xl pb-5 font-nohemi">
@@ -112,7 +112,7 @@ export function ContactForm() {
                     aria-label="Github Profile"
                   >
                     <FaGithub className="h-8 w-8" />
-                    <div className="flex flex-row">
+                    <div className="hidden lg:flex lg:flex-row">
                       Github <ArrowUpRightIcon />
                     </div>
                   </a>
@@ -124,7 +124,7 @@ export function ContactForm() {
                     aria-label="LinkedIn Profile"
                   >
                     <FaLinkedin className="h-8 w-8" />
-                    <div className="flex flex-row">
+                    <div className="hidden lg:flex lg:flex-row">
                       LinkedIn <ArrowUpRightIcon />
                     </div>
                   </a>
@@ -136,7 +136,7 @@ export function ContactForm() {
                     aria-label="Twitter Profile"
                   >
                     <FaXTwitter className="h-8 w-8" />
-                    <div className="flex flex-row">
+                    <div className="hidden lg:flex lg:flex-row">
                       Twitter <ArrowUpRightIcon />
                     </div>
                   </a>
@@ -145,7 +145,7 @@ export function ContactForm() {
             </CardHeader>
           </Card>
         </div>
-        <div className="w-1/2 flex-1">
+        <div className="lg:w-1/2 lg:flex-1">
           <Card className="placeholder:p-2 h-full">
             <form
               className="p-6"
@@ -153,7 +153,7 @@ export function ContactForm() {
               onSubmit={form.handleSubmit(onSubmit)}
             >
               <FieldGroup>
-                <div className="flex flex-row gap-4">
+                <div className="flex flex-col lg:flex-row lg:items-center gap-4">
                   <Controller
                     name="name"
                     control={form.control}

@@ -25,7 +25,9 @@ export default function Projects() {
 
   return (
     <div className="w-full">
-      <h2 className="text-5xl mb-6 pb-5">{t('title')}</h2>
+      <h2 className="xl:text-5xl lg:text-4xl md:text-3xl sm:text-xl mb-6 pb-5">
+        {t('title')}
+      </h2>
       <Accordion type="single" collapsible>
         <div className="flex flex-col gap-4">
           {projects.map((project) => {
@@ -37,7 +39,7 @@ export default function Projects() {
                 <AccordionTrigger className="border-l border-t border-foreground/30 hover:border-foreground rounded-tl-xl">
                   <div className="cursor-pointer flex flex-row items-center justify-between w-full">
                     <h3
-                      className={`text-5xl pl-10 ${fontClass} flex flex-row pr-10`}
+                      className={`xl:text-5xl lg:text-4xl md:text-3xl sm:text-xl pl-10 ${fontClass} flex flex-row pr-10`}
                     >
                       {/*} {project.logo && (
                         <img src={project.logo} className="w-20 h-20" />
@@ -54,7 +56,7 @@ export default function Projects() {
                         project.title
                       )}
                     </h3>
-                    <div className="flex pr-10">
+                    <div className="hidden lg:flex pr-10">
                       {project.stack.map((tech) => {
                         const icon = techIcons[tech];
                         return (
@@ -75,8 +77,8 @@ export default function Projects() {
                 </AccordionTrigger>
                 <AccordionContent>
                   <div className="flex flex-col gap-4">
-                    <div className="flex flex-row">
-                      <div className="w-2/5">
+                    <div className="flex flex-col lg:flex-row">
+                      <div className="w-full lg:w-2/5">
                         <p className="p-4 text-sm text-muted-foreground italic">
                           {project.date}
                         </p>
@@ -99,7 +101,7 @@ export default function Projects() {
                           )}
                         </div>
                       </div>
-                      <div className="w-3/5 ml-20 mr-4 rounded-lg overflow-hidden">
+                      <div className="lg:w-3/5 ml-20 mr-4 rounded-lg overflow-hidden w-full">
                         <img
                           src={project.image}
                           alt={project.title}
@@ -108,16 +110,13 @@ export default function Projects() {
                         />
                       </div>
                     </div>
-                    <div className="flex gap-3 p-4 flex-wrap">
+                    <div className="hidden lg:flex gap-3 p-4 flex-wrap">
                       {project.stack_details.map((tech) => {
                         const icon = techIcons[tech];
                         return (
                           <div key={tech} className="flex items-center gap-2">
                             {icon && (
-                              <div
-                                className="text-2xl w-6 h-6 opacity-50"
-                                title={tech}
-                              >
+                              <div className="text-2xl w-6 h-6" title={tech}>
                                 {icon}
                               </div>
                             )}

@@ -19,7 +19,7 @@ export default function HomePage() {
     <div className="max-w-screen-xl mx-auto w-full">
       <Navbar scrollToSection={scrollToSection} />
       <main className="flex flex-col gap-[32px]">
-        <header className="h-screen max-full mx-auto pt-20 md:pt-28 lg:pt-36 xl:pt-44 overflow-hidden relative text-center lg:pb-0">
+        <header className="h-screen max-full mx-auto pt-20 sm:pt-20 md:pt-28 lg:pt-36 xl:pt-44 overflow-hidden relative text-center lg:pb-0">
           <section
             id="titleSection"
             className="flex flex-col items-center justify-center z-0"
@@ -68,17 +68,17 @@ export default function HomePage() {
           </div>
         </header>
         <ScrollReveal>
-          <section id="projects" className="min-h-screen flex sm:pb-56">
+          <section id="projects" className="lg:min-h-screen flex sm:pb-56">
             <Projects />
           </section>
         </ScrollReveal>
         <ScrollReveal>
-          <section id="about" className="h-screen flex sm:pb-56">
+          <section id="about" className="lg:h-screen flex sm:pb-56">
             <About />
           </section>
         </ScrollReveal>
         <ScrollReveal>
-          <section id="contact" className="min-h-screen flex sm:pb-56">
+          <section id="contact" className="lg:min-h-screen flex sm:pb-56">
             <ContactForm />
           </section>
         </ScrollReveal>
