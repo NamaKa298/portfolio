@@ -313,10 +313,12 @@ body {
 }
 
 @layer base {
-  * {
-    @apply border-border;
+  *,
+  ::before,
+  ::after {
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: hsl(var(--border));
   }
-  /* body {
-    @apply bg-background text-foreground;
-  } */
 }
