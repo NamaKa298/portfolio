@@ -24,7 +24,7 @@ export default function Projects() {
   const tProjects = useTranslations('projects.projectsData');
 
   return (
-    <div className="w-full px-4 xl:px-0">
+    <div className="w-full px-4 xl:px-0 pt-5">
       <h2 className="text-4xl lg:text-6xl mb-6 pb-5">{t('title')}</h2>
       <Accordion type="single" collapsible>
         <div className="flex flex-col gap-4">
