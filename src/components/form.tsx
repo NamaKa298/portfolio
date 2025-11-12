@@ -70,8 +70,8 @@ export function ContactForm() {
   }
 
   return (
-    <div>
-      <h2 className="text-4xl lg:text-6xl xl:text-7xl text-center font-normal px-2 mx:px-0 mb-3 md:mb-4 lg:mb-5 xl:mb-10 max-w-7xl mx-auto">
+    <div className="w-full px-4 xl:px-0">
+      <h2 className="text-4xl lg:text-6xl xl:text-7xl text-center font-normal md:px-0 mb-3 md:mb-4 lg:mb-5 xl:mb-10 max-w-7xl mx-auto">
         {t('titlehero')}
       </h2>
       <div className="w-full max-w-7xl flex flex-col lg:flex-row gap-4">
