@@ -89,7 +89,7 @@ export default function About() {
         </div>
         <div className="w-full lg:w-1/2 lg:flex-1">
           <Card className=" text-justify lg:text-2xl lg:h-full">
-            <div className="mb-8 pt-5 p-5 lg:pt-10 lg:pl-10">
+            <div className="mb-8 pt-5 px-5 lg:pt-10 lg:pl-10">
               <h3 className="text-3xl lg:text-4xl">{t('tools')}</h3>
             </div>
             <div className="flex flex-wrap gap-4 p-5 lg:gap-8 lg:p-10">

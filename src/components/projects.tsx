@@ -37,7 +37,7 @@ export default function Projects() {
                 <AccordionTrigger className="border-l border-t border-foreground/30 hover:border-foreground rounded-tl-xl">
                   <div className="cursor-pointer flex flex-row items-center justify-between w-full">
                     <h3
-                      className={`xl:text-5xl lg:text-4xl md:text-3xl sm:text-xl pl-10 ${fontClass} flex flex-row pr-10`}
+                      className={`text-3xl xl:text-5xl lg:text-4xl pl-10 ${fontClass} flex flex-row pr-10`}
                     >
                       {/*} {project.logo && (
                         <img src={project.logo} className="w-20 h-20" />
@@ -80,6 +80,14 @@ export default function Projects() {
                         <p className="p-4 text-sm text-muted-foreground italic">
                           {project.date}
                         </p>
+                        <div className="lg:hidden rounded-lg overflow-hidden w-full mb-5">
+                          <img
+                            src={project.image}
+                            alt={project.title}
+                            className="w-full h-auto object-contain rounded-lg"
+                            loading="lazy"
+                          />
+                        </div>
                         <p className="p-4 text-justify text-lg">
                           {description}
                         </p>
@@ -99,7 +107,7 @@ export default function Projects() {
                           )}
                         </div>
                       </div>
-                      <div className="lg:w-3/5 ml-20 mr-4 rounded-lg overflow-hidden w-full">
+                      <div className="hidden lg:block lg:w-3/5 lg:ml-20 mr-4 rounded-lg overflow-hidden w-full">
                         <img
                           src={project.image}
                           alt={project.title}
@@ -112,7 +120,10 @@ export default function Projects() {
                       {project.stack_details.map((tech) => {
                         const icon = techIcons[tech];
                         return (
-                          <div key={tech} className="flex items-center gap-2">
+                          <div
+                            key={tech}
+                            className="flex items-center gap-2 opacity-50"
+                          >
                             {icon && (
                               <div className="text-2xl w-6 h-6" title={tech}>
                                 {icon}
