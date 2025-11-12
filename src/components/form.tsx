@@ -78,7 +78,7 @@ export function ContactForm() {
         <div className="lg:w-1/2 lg:flex-1">
           <Card className="flex flex-col h-full">
             <CardHeader className="text-xl flex-grow">
-              <CardTitle className="text-5xl pb-5 font-nohemi">
+              <CardTitle className="text-3xl lg:text-4xl pb-5 font-nohemi">
                 {t('title')}
               </CardTitle>
               <CardDescription className="text-xl">
@@ -90,6 +90,7 @@ export function ContactForm() {
                   <p className="text-lg font-semibold">{t('callTitle')}</p>
                   <p className="text-lg mb-6">{t('callDescription')} </p>
                   <Button
+                    aria-label="schedule-call"
                     variant="default"
                     className="flex font-light items-center justify-center size-lg sm:h-11 md:px-8 font-lg text-sm sm:text-sm bg-gradient-to-t from-[#A9AAAB] to-[#FAFAFA] px-8 py-5 hover:scale-105 transition-transform duration-300 custom-drop-shadow ButtonShadow"
                     onClick={() =>
@@ -99,7 +100,10 @@ export function ContactForm() {
                       )
                     }
                   >
-                    <Calendar className="!h-6 !w-6" />
+                    <Calendar
+                      className="!h-6 !w-6"
+                      aria-label="calendar-icon"
+                    />
                     {t('callButton')}
                   </Button>
                 </div>

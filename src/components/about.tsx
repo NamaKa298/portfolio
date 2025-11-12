@@ -39,6 +39,7 @@ export default function About() {
                   href="/CV_Marion_Saint_Martin.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="View CV PDF document"
                 >
                   <Button className="p-3 font-light hover:scale-105 flex gap-2 bg-foreground text-background hover:bg-primary/70 items-center justify-center size-lg sm:h-11 md:px-8 font-lg sm:text-lg bg-gradient-to-t from-[#A9AAAB] to-[#FAFAFA] rounded-xl transition-transform duration-300 custom-drop-shadow ButtonShadow">
                     <IoDocumentTextOutline className="!h-6 !w-6" />
@@ -93,21 +94,66 @@ export default function About() {
               <h3 className="text-3xl lg:text-4xl">{t('tools')}</h3>
             </div>
             <div className="flex flex-wrap gap-4 p-5 lg:gap-8 lg:p-10">
-              <SiTypescript className="text-[#3178c6] h-10 w-10 md:h-[50px] md:w-[50px]" />
-              <SiReact className="text-[#61dafb] h-10 w-10 md:h-[50px] md:w-[50px]" />
-              <SiPrisma className="h-[50px] w-[50px]" />
-              <SiNodedotjs className="text-[#339933] h-10 w-10 md:h-[50px] md:w-[50px]" />
-              <SiNextdotjs className="h-10 w-10 md:h-[50px] md:w-[50px]" />
-              <SiTailwindcss className="text-[#38bdf8] h-10 w-10 md:h-[50px] md:w-[50px]" />
-              <SiPostgresql className="text-[#336791] h-10 w-10 md:h-[50px] md:w-[50px]" />
-              <SiJavascript className="text-[#f7df1e] h-10 w-10 md:h-[50px] md:w-[50px]" />
-              <SiHtml5 className="text-[#e34f26] h-10 w-10 md:h-[50px] md:w-[50px]" />
-              <SiCss3 className="text-[#1572b6] h-10 w-10 md:h-[50px] md:w-[50px]" />
-              <FaSass className="text-[#cc6699] h-10 w-10 md:h-[50px] md:w-[50px]" />
-              <SiExpress className="h-10 w-10 md:h-[50px] md:w-[50px]" />
-              <SiGit className="text-[#f05032] h-10 w-10 md:h-[50px] md:w-[50px]" />
-              <SiFigma className="text-[#f24e1e] h-10 w-10 md:h-[50px] md:w-[50px]" />
-              <SiVercel className="h-10 w-10 md:h-[50px] md:w-[50px]" />
+              <SiTypescript
+                className="text-[#3178c6] h-10 w-10 md:h-[50px] md:w-[50px]"
+                aria-label="typescript-icon"
+              />
+              <SiReact
+                className="text-[#61dafb] h-10 w-10 md:h-[50px] md:w-[50px]"
+                aria-label="react-icon"
+              />
+              <SiPrisma
+                className="h-[50px] w-[50px]"
+                aria-label="prisma-icon"
+              />
+              <SiNodedotjs
+                className="text-[#339933] h-10 w-10 md:h-[50px] md:w-[50px]"
+                aria-label="nodejs-icon"
+              />
+              <SiNextdotjs
+                className="h-10 w-10 md:h-[50px] md:w-[50px]"
+                aria-label="nextjs-icon"
+              />
+              <SiTailwindcss
+                className="text-[#38bdf8] h-10 w-10 md:h-[50px] md:w-[50px]"
+                aria-label="tailwindcss-icon"
+              />
+              <SiPostgresql
+                className="text-[#336791] h-10 w-10 md:h-[50px] md:w-[50px]"
+                aria-label="postgresql-icon"
+              />
+              <SiJavascript
+                className="text-[#f7df1e] h-10 w-10 md:h-[50px] md:w-[50px]"
+                aria-label="javascript-icon"
+              />
+              <SiHtml5
+                className="text-[#e34f26] h-10 w-10 md:h-[50px] md:w-[50px]"
+                aria-label="html5-icon"
+              />
+              <SiCss3
+                className="text-[#1572b6] h-10 w-10 md:h-[50px] md:w-[50px]"
+                aria-label="css3-icon"
+              />
+              <FaSass
+                className="text-[#cc6699] h-10 w-10 md:h-[50px] md:w-[50px]"
+                aria-label="sass-icon"
+              />
+              <SiExpress
+                className="h-10 w-10 md:h-[50px] md:w-[50px]"
+                aria-label="express-icon"
+              />
+              <SiGit
+                className="text-[#f05032] h-10 w-10 md:h-[50px] md:w-[50px]"
+                aria-label="git-icon"
+              />
+              <SiFigma
+                className="text-[#f24e1e] h-10 w-10 md:h-[50px] md:w-[50px]"
+                aria-label="figma-icon"
+              />
+              <SiVercel
+                className="h-10 w-10 md:h-[50px] md:w-[50px]"
+                aria-label="vercel-icon"
+              />
             </div>
           </Card>
         </div>

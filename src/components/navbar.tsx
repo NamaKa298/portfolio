@@ -26,6 +26,7 @@ export const Navbar = ({
       {/* Bouton fermer EN HAUT à droite */}
       <div className="absolute top-6 right-6">
         <button
+          aria-label="close-menu"
           className="h-8 w-8 cursor-pointer flex items-center justify-center text-white hover:bg-gray-800 rounded-full transition-colors"
           onClick={() => setIsMobileMenuOpen(false)}
         >
@@ -138,6 +139,8 @@ export const Navbar = ({
           <button
             className="h-8 w-8 cursor-pointer flex items-center justify-center"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle mobile menu"
+            aria-expanded={isMobileMenuOpen}
           >
             <MenuIcon className="h-6 w-6" />
           </button>

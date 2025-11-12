@@ -19,10 +19,14 @@ export function LanguageSwitcher() {
     <div className="flex items-center space-x-2 h-10">
       <Switch
         id="language_mode"
+        aria-label="Language switcher"
+        aria-labelledby="language_label"
         checked={locale === 'en'}
         onCheckedChange={changeLanguage}
       />
-      <Label htmlFor="language_mode">fr / en</Label>
+      <Label id="language_label" htmlFor="language_mode">
+        fr / en
+      </Label>
     </div>
   );
 }
