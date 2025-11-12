@@ -86,7 +86,7 @@ export function ContactForm() {
               </CardDescription>
 
               <div className="flex flex-col justify-between h-full mt-auto items-end">
-                <div className="flex flex-col text-center mt-9 w-full">
+                <div className="flex flex-col text-center mt-9 w-full pb-10 lg:pb-0">
                   <p className="text-lg font-semibold">{t('callTitle')}</p>
                   <p className="text-lg mb-6">{t('callDescription')} </p>
                   <Button

@@ -88,7 +88,7 @@ export default function Projects() {
                             loading="lazy"
                           />
                         </div>
-                        <p className="p-4 text-justify text-lg">
+                        <p className="lg:p-4 text-justify text-lg">
                           {description}
                         </p>
                         <div className="flex pt-10 pb-10 justify-center">

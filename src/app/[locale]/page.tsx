@@ -18,7 +18,7 @@ export default function HomePage() {
   return (
     <div className="max-w-screen-xl mx-auto w-full">
       <Navbar scrollToSection={scrollToSection} />
-      <main className="flex flex-col gap-[32px]">
+      <main className="flex flex-col gap-[56px]">
         <header className="h-screen max-full mx-auto pt-20 sm:pt-20 md:pt-28 lg:pt-36 xl:pt-44 overflow-hidden relative text-center lg:pb-0">
           <section
             id="titleSection"
@@ -68,24 +68,27 @@ export default function HomePage() {
           </div>
         </header>
         <ScrollReveal>
-          <section id="projects" className="lg:min-h-screen flex sm:pb-56">
+          <section
+            id="projects"
+            className="lg:min-h-screen flex mb-32 lg:mb-56"
+          >
             <Projects />
           </section>
         </ScrollReveal>
         <ScrollReveal>
-          <section id="about" className="lg:h-screen flex sm:pb-56">
+          <section id="about" className="lg:h-screen flex mb-32 lg:pb-56">
             <About />
           </section>
         </ScrollReveal>
         <ScrollReveal>
-          <section id="contact" className="lg:min-h-screen flex sm:pb-56">
+          <section id="contact" className="lg:min-h-screen flex mb-32">
             <ContactForm />
           </section>
         </ScrollReveal>
       </main>
       <footer className="flex flex-col gap-[24px] items-center justify-center border-t py-10">
         <div className="flex justify-center text-center">{t('footer')}</div>
-        <div className="flex flex-wrap row-start-3 items-center justify-center gap-[24px] ">
+        <div className="hidden lg:flex flex-wrap row-start-3 items-center justify-center gap-[24px] ">
           <a
             className="flex items-center gap-2 hover:underline hover:underline-offset-4 hover:text-primary/50"
             href="https://github.com/NamaKa298"
