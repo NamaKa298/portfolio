@@ -83,35 +83,37 @@ export default function HomePage() {
           </section>
         </ScrollReveal>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center border-t py-10">
-        <div>{t('footer')}</div>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4 hover:text-primary/50"
-          href="https://github.com/NamaKa298"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaGithub />
-          Github →
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4 hover:text-primary/50"
-          href="https://www.linkedin.com/in/marionsaint-martin/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaLinkedin />
-          LinkedIn →
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4 hover:text-primary/50"
-          href="https://x.com/marion_st_m"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaXTwitter />
-          Twitter →
-        </a>
+      <footer className="flex flex-col gap-[24px] items-center justify-center border-t py-10">
+        <div className="flex justify-center text-center">{t('footer')}</div>
+        <div className="flex flex-wrap row-start-3 items-center justify-center gap-[24px] ">
+          <a
+            className="flex items-center gap-2 hover:underline hover:underline-offset-4 hover:text-primary/50"
+            href="https://github.com/NamaKa298"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaGithub />
+            Github →
+          </a>
+          <a
+            className="flex items-center gap-2 hover:underline hover:underline-offset-4 hover:text-primary/50"
+            href="https://www.linkedin.com/in/marionsaint-martin/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaLinkedin />
+            LinkedIn →
+          </a>
+          <a
+            className="flex items-center gap-2 hover:underline hover:underline-offset-4 hover:text-primary/50"
+            href="https://x.com/marion_st_m"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaXTwitter />
+            Twitter →
+          </a>
+        </div>
       </footer>
     </div>
   );
