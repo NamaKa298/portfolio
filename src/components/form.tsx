@@ -71,7 +71,15 @@ export function ContactForm() {
 
   return (
     <div className="w-full px-4 xl:px-0">
-      <h2 className="text-4xl lg:text-6xl xl:text-7xl text-center font-normal md:px-0 mb-3 md:mb-4 lg:mb-5 xl:mb-10 max-w-7xl mx-auto">
+      <h2
+        className="text-4xl lg:text-6xl xl:text-7xl text-center font-normal md:px-0 mb-3 md:mb-4 lg:mb-5 xl:mb-10 max-w-7xl mx-auto"
+        style={{
+          background: 'linear-gradient(111deg, #7d7d7d 14.07%, #fff 48.3%)',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          backgroundClip: 'text',
+        }}
+      >
         {t('titlehero')}
       </h2>
       <div className="w-full max-w-7xl flex flex-col lg:flex-row gap-4">

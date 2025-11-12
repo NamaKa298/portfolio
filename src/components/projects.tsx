@@ -48,7 +48,7 @@ export default function Projects() {
                           src={project.title}
                           alt="Project Logo"
                           loading="lazy"
-                          className="h-[48px] w-auto"
+                          className="h-[30px] md:h-[35px] lg:h-[48px] w-auto"
                         />
                       ) : (
                         project.title
@@ -88,9 +88,7 @@ export default function Projects() {
                             loading="lazy"
                           />
                         </div>
-                        <p className="lg:p-4 text-justify text-lg">
-                          {description}
-                        </p>
+                        <p className="lg:p-4 text-lg">{description}</p>
                         <div className="flex pt-10 pb-10 justify-center">
                           {project.link ? (
                             <a

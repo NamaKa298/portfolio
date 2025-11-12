@@ -68,15 +68,12 @@ export default function HomePage() {
           </div>
         </header>
         <ScrollReveal>
-          <section
-            id="projects"
-            className="lg:min-h-screen flex mb-32 lg:mb-56"
-          >
+          <section id="projects" className="lg:min-h-screen flex mb-16">
             <Projects />
           </section>
         </ScrollReveal>
         <ScrollReveal>
-          <section id="about" className="lg:h-screen flex mb-32 lg:pb-56">
+          <section id="about" className="lg:h-screen flex mb-16 lg:mb-56">
             <About />
           </section>
         </ScrollReveal>

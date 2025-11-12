@@ -19,7 +19,7 @@
     "viewProject": "View Project",
     "projectsData": {
       "lightStep": {
-        "description": "LightStep is an online store dedicated to sports enthusiasts, offering a wide selection of equipment suitable for all disciplines. With an intuitive interface and advanced filters, users can easily find reliable and high-performance products, accompanied by reviews and recommendations for informed choices."
+        "description": "LightStep is an e-commerce platform dedicated to barefoot shoes, a niche that values natural comfort and free foot movement. The goal: to create a smooth and minimalist experience that reflects the product itself. I designed an application capable of handling several thousand products and users, with a database optimized for performance and scalability. The UX was carefully crafted to minimize the number of required interactions, using modals, subtle transitions, and a direct purchase flow. The UI, designed in Figma, visually conveys the project’s minimalist philosophy. LightStep allowed me to combine design, ergonomics, and solid technical architecture to build an application that is both high-performing and consistent."
       },
       "nutribouge": {
         "description": "Showcase site for a sports coaching and dietetics practice. A comprehensive platform offering individual and group coaching services, with pricing system, contact form, presentation of therapeutic education and dietetics services."
@@ -31,7 +31,8 @@
   },
   "about": {
     "title": "About",
-    "description": "I'm Marion, a passionate full-stack web developer with a knack for creating dynamic and user-friendly web applications. With expertise in both front-end and back-end technologies, I bring ideas to life through clean code and innovative solutions. Whether it's building responsive websites or developing robust server-side applications, I thrive on turning complex challenges into seamless digital experiences. Let's collaborate to transform your vision into reality!",
+    "description": "I'm Marion, a full-stack web developer with an engineering background. I love combining scientific rigor and creativity to design web solutions that are useful, high-performing, and user-centered. Passionate about both front-end and back-end development, I bring ideas to life through clean and efficient code.",
+    "share": " Want to connect or collaborate? Find me on my social networks!",
     "cv": "View my CV",
     "tools": "My tools :"
   },

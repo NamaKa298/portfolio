@@ -31,9 +31,10 @@ export default function About() {
       <h2 className="text-4xl lg:text-6xl mb-6 pb-5">{t('title')}</h2>
       <div className="w-full max-w-7xl flex flex-col lg:flex-row text-lg gap-4">
         <div className="lg:w-1/2 lg:flex-1">
-          <Card className="text-justify text-xl lg:h-full">
+          <Card className=" text-xl lg:h-full">
             <div className="flex flex-col p-5 lg:p-10">
               <p>{t('description')}</p>
+              <p className="pt-4 font-semibold">{t('share')}</p>
               <div className="flex justify-center p-20">
                 <a
                   href="/CV_Marion_Saint_Martin.pdf"
@@ -89,7 +90,7 @@ export default function About() {
           </Card>
         </div>
         <div className="w-full lg:w-1/2 lg:flex-1">
-          <Card className=" text-justify lg:text-2xl lg:h-full">
+          <Card className="lg:text-2xl lg:h-full">
             <div className="mb-8 pt-5 px-5 lg:pt-10 lg:pl-10">
               <h3 className="text-3xl lg:text-4xl">{t('tools')}</h3>
             </div>

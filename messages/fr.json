@@ -19,7 +19,7 @@
     "viewProject": "Voir le projet",
     "projectsData": {
       "lightStep": {
-        "description": "LightStep est une boutique en ligne dédiée aux passionnés de sport, offrant une sélection variée d'équipements adaptés à toutes les disciplines. Grâce à une interface intuitive et des filtres avancés, les utilisateurs peuvent facilement trouver des produits fiables et performants, accompagnés d'avis et de recommandations pour un choix éclairé."
+        "description": "LightStep est une plateforme e-commerce dédiée aux chaussures “barefoot”, une niche qui valorise le confort naturel et le mouvement libre du pied. L'objectif : créer une expérience fluide et épurée à l'image du produit. J'ai conçu une application capable de gérer plusieurs milliers de produits et d'utilisateurs, avec une base de données optimisée pour la performance et la scalabilité. L'UX a été pensée pour réduire le nombre d'interactions nécessaires : modales, transitions légères et parcours d'achat direct. L'UI, dessinée sur Figma, traduit visuellement la philosophie minimaliste du projet. LightStep m'a permis de combiner design, ergonomie et architecture technique solide pour construire une application à la fois performante et cohérente."
       },
       "nutribouge": {
         "description": "Site vitrine pour cabinet de coaching sportif et diététique. Plateforme complète proposant des services de coaching individuel et en groupe, avec système de tarification, formulaire de contact, présentation des services d'éducation thérapeutique et de diététique."
@@ -31,7 +31,8 @@
   },
   "about": {
     "title": "À propos",
-    "description": "Je suis Marion, une développeuse web full-stack passionnée. Avec une expertise à la fois dans les technologies front-end et back-end, je donne vie aux idées grâce à un code propre et des solutions innovantes.\n Intéressé/ée par la création d'un projet, par la collaboration ou par mon profil ? Tu peux me retrouver sur les réseaux suivant pour échanger !",
+    "description": "Je suis Marion, développeuse web full-stack issue de l'ingénierie. J'aime allier rigueur scientifique et créativité pour concevoir des solutions web utiles, performantes et centrées sur l'utilisateur. Passionnée par le développement front-end et back-end, je transforme les idées en projets concrets grâce à un code clair et efficace.",
+    "share": "Envie d'échanger ou de collaborer ? Retrouve-moi sur les réseaux !",
     "cv": "Consulter mon CV",
     "tools": "Mes outils :"
   },
