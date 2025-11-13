@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { projects } from '@/data/projects';
 import { techIcons } from '@/data/iconMapping';
+import Image from 'next/image';
 import {
   Accordion,
   AccordionContent,
@@ -44,11 +45,13 @@ export default function Projects() {
                       )}
                         */}
                       {project.title.startsWith('/') ? (
-                        <img
+                        <Image
                           src={project.title}
                           alt="Project Logo"
                           loading="lazy"
-                          className="h-[30px] md:h-[35px] lg:h-[48px] w-auto"
+                          width={1675}
+                          height={188}
+                          className="h-[25px] sm:h-[30px] md:h-[35px] lg:h-[48px] w-auto"
                         />
                       ) : (
                         project.title
@@ -80,11 +83,12 @@ export default function Projects() {
                         <p className="p-4 text-sm text-muted-foreground italic">
                           {project.date}
                         </p>
-                        <div className="lg:hidden rounded-lg overflow-hidden w-full mb-5">
-                          <img
+                        <div className="lg:hidden rounded-lg overflow-hidden w-full mb-5 relative aspect-video">
+                          <Image
                             src={project.image}
                             alt={project.title}
-                            className="w-full h-auto object-contain rounded-lg"
+                            fill
+                            className="w-full h-auto object-contain rounded-xl"
                             loading="lazy"
                           />
                         </div>
@@ -106,9 +110,11 @@ export default function Projects() {
                         </div>
                       </div>
                       <div className="hidden lg:block lg:w-3/5 lg:ml-20 mr-4 rounded-lg overflow-hidden w-full">
-                        <img
+                        <Image
                           src={project.image}
                           alt={project.title}
+                          width={1920}
+                          height={1080}
                           className="w-full h-auto object-contain rounded-lg"
                           loading="lazy"
                         />
