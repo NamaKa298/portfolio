@@ -19,6 +19,10 @@ import {
   SiPython,
   SiShadcnui,
   SiGithub,
+  SiResend,
+  SiRedis,
+  SiVite,
+  SiRender,
 } from 'react-icons/si';
 import { FaSass } from 'react-icons/fa';
 // Mapping centralisé de TOUTES les icônes
@@ -26,6 +30,8 @@ export const techIcons: Record<string, React.JSX.Element> = {
   // Frameworks
   'Next.js': <SiNextdotjs />,
   React: <SiReact />,
+  Vite: <SiVite />,
+  Render: <SiRender />,
 
   // Langages
   TypeScript: <SiTypescript />,
@@ -54,4 +60,6 @@ export const techIcons: Record<string, React.JSX.Element> = {
   Vercel: <SiVercel />,
   Trello: <SiTrello />,
   Github: <SiGithub />,
+  Resend: <SiResend />,
+  Redis: <SiRedis />,
 };
