@@ -61,7 +61,7 @@ export default function HomePage() {
             </div>
           </section>
           <div
-            className=" z-[-10] bg-[#D9D9D9] w-full h-[1000px] rounded-full absolute bottom-[-350px] left-1/2 -translate-x-1/2 translate-y-1/2 mix-blend-lighten pointer-events-none opacity-0 blur-[200px] animate-glow-appear"
+            className=" z-[-10] bg-[#949494] w-full h-[1000px] rounded-full absolute bottom-[-350px] left-1/2 -translate-x-1/2 translate-y-1/2 mix-blend-lighten pointer-events-none opacity-0 blur-[300px] animate-glow-appear"
             style={{ opacity: 0.3 }}
           >
             {''}
