@@ -3,7 +3,7 @@ export interface Project {
   title: string;
   descriptionKey: string;
   image: string;
-  date?: string;
+  dateKey?: string;
   stack: string[];
   stack_details: string[];
   link?: string;
