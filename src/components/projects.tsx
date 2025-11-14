@@ -32,6 +32,7 @@ export default function Projects() {
           {projects.map((project) => {
             const fontClass = project.font ? fontClasses[project.font] : '';
             const description = tProjects(`${project.id}.description`);
+            const date = tProjects(`${project.id}.date`);
 
             return (
               <AccordionItem value={project.id} key={project.id}>
@@ -81,7 +82,7 @@ export default function Projects() {
                     <div className="flex flex-col lg:flex-row">
                       <div className="w-full lg:w-2/5">
                         <p className="p-4 text-sm text-muted-foreground italic">
-                          {project.date}
+                          {date}
                         </p>
                         <div className="lg:hidden rounded-lg overflow-hidden w-full mb-5 relative aspect-video">
                           <Image
